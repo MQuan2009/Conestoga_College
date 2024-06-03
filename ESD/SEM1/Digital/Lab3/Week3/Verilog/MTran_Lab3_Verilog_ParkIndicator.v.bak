@@ -1,0 +1,8 @@
+module MTran_Lab3_Verilog_ParkingIndicator(SW0,SW1,SW2,SW3,SW4,SW5,LEDR,LEDG);
+
+input SW0, SW1, SW2, SW3, SW4, SW5;
+output LEDR, LEDG;
+and (LEDR, SW0, SW1, SW2, SW3, SW4, SW5);
+not (LEDG, LEDR);
+
+end module

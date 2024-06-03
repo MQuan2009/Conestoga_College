@@ -1,0 +1,845 @@
+Analysis & Synthesis report for MTran_Lab4_Verilog_7SegmentLed
+Thu May 30 22:21:42 2024
+Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod1
+ 12. Parameter Settings for Inferred Entity Instance: lpm_divide:Div1
+ 13. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+ 14. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++---------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Thu May 30 22:21:42 2024          ;
+; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
+; Revision Name                   ; MTran_Lab4_Verilog_7SegmentLed                 ;
+; Top-level Entity Name           ; MTran_Lab4_Verilog_7SegmentLed                 ;
+; Family                          ; Cyclone V                                      ;
+; Logic utilization (in ALMs)     ; N/A                                            ;
+; Total registers                 ; 1                                              ;
+; Total pins                      ; 50                                             ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 0                                              ;
+; Total DSP Blocks                ; 0                                              ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 0                                              ;
+; Total DLLs                      ; 0                                              ;
++---------------------------------+------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                                                     ;
++---------------------------------------------------------------------------------+--------------------------------+--------------------------------+
+; Option                                                                          ; Setting                        ; Default Value                  ;
++---------------------------------------------------------------------------------+--------------------------------+--------------------------------+
+; Device                                                                          ; 5CSEMA5F31C6                   ;                                ;
+; Top-level entity name                                                           ; MTran_Lab4_Verilog_7SegmentLed ; MTran_Lab4_Verilog_7SegmentLed ;
+; Family name                                                                     ; Cyclone V                      ; Cyclone V                      ;
+; Use smart compilation                                                           ; Off                            ; Off                            ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                             ; On                             ;
+; Enable compact report table                                                     ; Off                            ; Off                            ;
+; Restructure Multiplexers                                                        ; Auto                           ; Auto                           ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                            ; Off                            ;
+; Create Debugging Nodes for IP Cores                                             ; Off                            ; Off                            ;
+; Preserve fewer node names                                                       ; On                             ; On                             ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable                         ; Enable                         ;
+; Verilog Version                                                                 ; Verilog_2001                   ; Verilog_2001                   ;
+; VHDL Version                                                                    ; VHDL_1993                      ; VHDL_1993                      ;
+; State Machine Processing                                                        ; Auto                           ; Auto                           ;
+; Safe State Machine                                                              ; Off                            ; Off                            ;
+; Extract Verilog State Machines                                                  ; On                             ; On                             ;
+; Extract VHDL State Machines                                                     ; On                             ; On                             ;
+; Ignore Verilog initial constructs                                               ; Off                            ; Off                            ;
+; Iteration limit for constant Verilog loops                                      ; 5000                           ; 5000                           ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                            ; 250                            ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                             ; On                             ;
+; Infer RAMs from Raw Logic                                                       ; On                             ; On                             ;
+; Parallel Synthesis                                                              ; On                             ; On                             ;
+; DSP Block Balancing                                                             ; Auto                           ; Auto                           ;
+; NOT Gate Push-Back                                                              ; On                             ; On                             ;
+; Power-Up Don't Care                                                             ; On                             ; On                             ;
+; Remove Redundant Logic Cells                                                    ; Off                            ; Off                            ;
+; Remove Duplicate Registers                                                      ; On                             ; On                             ;
+; Ignore CARRY Buffers                                                            ; Off                            ; Off                            ;
+; Ignore CASCADE Buffers                                                          ; Off                            ; Off                            ;
+; Ignore GLOBAL Buffers                                                           ; Off                            ; Off                            ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                            ; Off                            ;
+; Ignore LCELL Buffers                                                            ; Off                            ; Off                            ;
+; Ignore SOFT Buffers                                                             ; On                             ; On                             ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                            ; Off                            ;
+; Optimization Technique                                                          ; Balanced                       ; Balanced                       ;
+; Carry Chain Length                                                              ; 70                             ; 70                             ;
+; Auto Carry Chains                                                               ; On                             ; On                             ;
+; Auto Open-Drain Pins                                                            ; On                             ; On                             ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                            ; Off                            ;
+; Auto ROM Replacement                                                            ; On                             ; On                             ;
+; Auto RAM Replacement                                                            ; On                             ; On                             ;
+; Auto DSP Block Replacement                                                      ; On                             ; On                             ;
+; Auto Shift Register Replacement                                                 ; Auto                           ; Auto                           ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto                           ; Auto                           ;
+; Auto Clock Enable Replacement                                                   ; On                             ; On                             ;
+; Strict RAM Replacement                                                          ; Off                            ; Off                            ;
+; Allow Synchronous Control Signals                                               ; On                             ; On                             ;
+; Force Use of Synchronous Clear Signals                                          ; Off                            ; Off                            ;
+; Auto Resource Sharing                                                           ; Off                            ; Off                            ;
+; Allow Any RAM Size For Recognition                                              ; Off                            ; Off                            ;
+; Allow Any ROM Size For Recognition                                              ; Off                            ; Off                            ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                            ; Off                            ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                             ; On                             ;
+; Ignore translate_off and synthesis_off directives                               ; Off                            ; Off                            ;
+; Timing-Driven Synthesis                                                         ; On                             ; On                             ;
+; Report Parameter Settings                                                       ; On                             ; On                             ;
+; Report Source Assignments                                                       ; On                             ; On                             ;
+; Report Connectivity Checks                                                      ; On                             ; On                             ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                            ; Off                            ;
+; Synchronization Register Chain Length                                           ; 3                              ; 3                              ;
+; Power Optimization During Synthesis                                             ; Normal compilation             ; Normal compilation             ;
+; HDL message level                                                               ; Level2                         ; Level2                         ;
+; Suppress Register Optimization Related Messages                                 ; Off                            ; Off                            ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000                           ; 5000                           ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000                           ; 5000                           ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                            ; 100                            ;
+; Clock MUX Protection                                                            ; On                             ; On                             ;
+; Auto Gated Clock Conversion                                                     ; Off                            ; Off                            ;
+; Block Design Naming                                                             ; Auto                           ; Auto                           ;
+; SDC constraint protection                                                       ; Off                            ; Off                            ;
+; Synthesis Effort                                                                ; Auto                           ; Auto                           ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                             ; On                             ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                            ; Off                            ;
+; Analysis & Synthesis Message Level                                              ; Medium                         ; Medium                         ;
+; Disable Register Merging Across Hierarchies                                     ; Auto                           ; Auto                           ;
+; Resource Aware Inference For Block RAM                                          ; On                             ; On                             ;
+; Automatic Parallel Synthesis                                                    ; On                             ; On                             ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                            ; Off                            ;
++---------------------------------------------------------------------------------+--------------------------------+--------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 10          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 10          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-10        ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                       ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                   ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
+; MTran_Lab4_Verilog_7SegmentLed.v ; yes             ; User Verilog HDL File        ; D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v        ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; d:/software/intelfpga_lite/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; d:/software/intelfpga_lite/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; d:/software/intelfpga_lite/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal231.inc                   ; yes             ; Megafunction                 ; d:/software/intelfpga_lite/quartus/libraries/megafunctions/aglobal231.inc      ;         ;
+; db/lpm_divide_eho.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/db/lpm_divide_eho.tdf                   ;         ;
+; db/abs_divider_kbg.tdf           ; yes             ; Auto-Generated Megafunction  ; D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/db/abs_divider_kbg.tdf                  ;         ;
+; db/alt_u_div_ove.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/db/alt_u_div_ove.tdf                    ;         ;
+; db/lpm_abs_kn9.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/db/lpm_abs_kn9.tdf                      ;         ;
+; db/lpm_abs_4p9.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/db/lpm_abs_4p9.tdf                      ;         ;
+; db/lpm_divide_bpo.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/db/lpm_divide_bpo.tdf                   ;         ;
+; db/lpm_divide_epo.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/db/lpm_divide_epo.tdf                   ;         ;
+; db/abs_divider_nbg.tdf           ; yes             ; Auto-Generated Megafunction  ; D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/db/abs_divider_nbg.tdf                  ;         ;
+; db/alt_u_div_uve.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/db/alt_u_div_uve.tdf                    ;         ;
+; db/lpm_abs_nn9.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/db/lpm_abs_nn9.tdf                      ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimate of Logic utilization (ALMs needed) ; 285      ;
+;                                             ;          ;
+; Combinational ALUT usage for logic          ; 546      ;
+;     -- 7 input functions                    ; 0        ;
+;     -- 6 input functions                    ; 22       ;
+;     -- 5 input functions                    ; 16       ;
+;     -- 4 input functions                    ; 107      ;
+;     -- <=3 input functions                  ; 401      ;
+;                                             ;          ;
+; Dedicated logic registers                   ; 1        ;
+;                                             ;          ;
+; I/O pins                                    ; 50       ;
+;                                             ;          ;
+; Total DSP Blocks                            ; 0        ;
+;                                             ;          ;
+; Maximum fan-out node                        ; add_flag ;
+; Maximum fan-out                             ; 37       ;
+; Total fan-out                               ; 1774     ;
+; Average fan-out                             ; 2.74     ;
++---------------------------------------------+----------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                          ;
++---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+--------------------------------+--------------+
+; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                         ; Entity Name                    ; Library Name ;
++---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+--------------------------------+--------------+
+; |MTran_Lab4_Verilog_7SegmentLed       ; 546 (143)           ; 1 (1)                     ; 0                 ; 0          ; 50   ; 0            ; |MTran_Lab4_Verilog_7SegmentLed                                                                                             ; MTran_Lab4_Verilog_7SegmentLed ; work         ;
+;    |lpm_divide:Div0|                  ; 121 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MTran_Lab4_Verilog_7SegmentLed|lpm_divide:Div0                                                                             ; lpm_divide                     ; work         ;
+;       |lpm_divide_epo:auto_generated| ; 121 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MTran_Lab4_Verilog_7SegmentLed|lpm_divide:Div0|lpm_divide_epo:auto_generated                                               ; lpm_divide_epo                 ; work         ;
+;          |abs_divider_nbg:divider|    ; 121 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MTran_Lab4_Verilog_7SegmentLed|lpm_divide:Div0|lpm_divide_epo:auto_generated|abs_divider_nbg:divider                       ; abs_divider_nbg                ; work         ;
+;             |alt_u_div_uve:divider|   ; 121 (121)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MTran_Lab4_Verilog_7SegmentLed|lpm_divide:Div0|lpm_divide_epo:auto_generated|abs_divider_nbg:divider|alt_u_div_uve:divider ; alt_u_div_uve                  ; work         ;
+;    |lpm_divide:Div1|                  ; 96 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MTran_Lab4_Verilog_7SegmentLed|lpm_divide:Div1                                                                             ; lpm_divide                     ; work         ;
+;       |lpm_divide_bpo:auto_generated| ; 96 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MTran_Lab4_Verilog_7SegmentLed|lpm_divide:Div1|lpm_divide_bpo:auto_generated                                               ; lpm_divide_bpo                 ; work         ;
+;          |abs_divider_kbg:divider|    ; 96 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MTran_Lab4_Verilog_7SegmentLed|lpm_divide:Div1|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider                       ; abs_divider_kbg                ; work         ;
+;             |alt_u_div_ove:divider|   ; 96 (96)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MTran_Lab4_Verilog_7SegmentLed|lpm_divide:Div1|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|alt_u_div_ove:divider ; alt_u_div_ove                  ; work         ;
+;    |lpm_divide:Mod0|                  ; 86 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MTran_Lab4_Verilog_7SegmentLed|lpm_divide:Mod0                                                                             ; lpm_divide                     ; work         ;
+;       |lpm_divide_eho:auto_generated| ; 86 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MTran_Lab4_Verilog_7SegmentLed|lpm_divide:Mod0|lpm_divide_eho:auto_generated                                               ; lpm_divide_eho                 ; work         ;
+;          |abs_divider_kbg:divider|    ; 86 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MTran_Lab4_Verilog_7SegmentLed|lpm_divide:Mod0|lpm_divide_eho:auto_generated|abs_divider_kbg:divider                       ; abs_divider_kbg                ; work         ;
+;             |alt_u_div_ove:divider|   ; 86 (86)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MTran_Lab4_Verilog_7SegmentLed|lpm_divide:Mod0|lpm_divide_eho:auto_generated|abs_divider_kbg:divider|alt_u_div_ove:divider ; alt_u_div_ove                  ; work         ;
+;    |lpm_divide:Mod1|                  ; 100 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MTran_Lab4_Verilog_7SegmentLed|lpm_divide:Mod1                                                                             ; lpm_divide                     ; work         ;
+;       |lpm_divide_eho:auto_generated| ; 100 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MTran_Lab4_Verilog_7SegmentLed|lpm_divide:Mod1|lpm_divide_eho:auto_generated                                               ; lpm_divide_eho                 ; work         ;
+;          |abs_divider_kbg:divider|    ; 100 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MTran_Lab4_Verilog_7SegmentLed|lpm_divide:Mod1|lpm_divide_eho:auto_generated|abs_divider_kbg:divider                       ; abs_divider_kbg                ; work         ;
+;             |alt_u_div_ove:divider|   ; 100 (100)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MTran_Lab4_Verilog_7SegmentLed|lpm_divide:Mod1|lpm_divide_eho:auto_generated|abs_divider_kbg:divider|alt_u_div_ove:divider ; alt_u_div_ove                  ; work         ;
++---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+--------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; LED[0]$latch                                        ; LED[3]              ; yes                    ;
+; LED[1]$latch                                        ; LED[3]              ; yes                    ;
+; LED[2]$latch                                        ; LED[3]              ; yes                    ;
+; LED[3]$latch                                        ; LED[3]              ; yes                    ;
+; LED[4]$latch                                        ; LED[7]              ; yes                    ;
+; LED[5]$latch                                        ; LED[7]              ; yes                    ;
+; LED[6]$latch                                        ; LED[7]              ; yes                    ;
+; LED[7]$latch                                        ; LED[7]              ; yes                    ;
+; err_num1[0]                                         ; LED[3]              ; yes                    ;
+; err_num2[0]                                         ; LED[7]              ; yes                    ;
+; num1_flag                                           ; GND                 ; yes                    ;
+; num2[0]                                             ; num2[31]            ; yes                    ;
+; num1[0]                                             ; num1[29]            ; yes                    ;
+; num2[1]                                             ; num2[31]            ; yes                    ;
+; num1[1]                                             ; num1[29]            ; yes                    ;
+; num2[2]                                             ; num2[31]            ; yes                    ;
+; num1[2]                                             ; num1[29]            ; yes                    ;
+; num2[3]                                             ; num2[31]            ; yes                    ;
+; num1[3]                                             ; num1[29]            ; yes                    ;
+; num2[4]                                             ; num2[31]            ; yes                    ;
+; num1[4]                                             ; num1[29]            ; yes                    ;
+; num2[5]                                             ; num2[31]            ; yes                    ;
+; num1[5]                                             ; num1[29]            ; yes                    ;
+; num2[6]                                             ; num2[31]            ; yes                    ;
+; num1[6]                                             ; num1[29]            ; yes                    ;
+; num2[7]                                             ; num2[31]            ; yes                    ;
+; num1[7]                                             ; num1[29]            ; yes                    ;
+; digit2[0]                                           ; digit3[0]           ; yes                    ;
+; digit0[0]                                           ; digit1[0]           ; yes                    ;
+; digit2[1]                                           ; digit3[0]           ; yes                    ;
+; digit3[0]                                           ; digit3[0]           ; yes                    ;
+; digit0[1]                                           ; digit1[0]           ; yes                    ;
+; digit1[0]                                           ; digit1[0]           ; yes                    ;
+; digit2[2]                                           ; digit3[0]           ; yes                    ;
+; digit3[1]                                           ; digit3[0]           ; yes                    ;
+; digit0[2]                                           ; digit1[0]           ; yes                    ;
+; digit1[1]                                           ; digit1[0]           ; yes                    ;
+; digit2[3]                                           ; digit3[0]           ; yes                    ;
+; digit3[2]                                           ; digit3[0]           ; yes                    ;
+; digit0[3]                                           ; digit1[0]           ; yes                    ;
+; digit1[2]                                           ; digit1[0]           ; yes                    ;
+; digit3[3]                                           ; digit3[0]           ; yes                    ;
+; digit1[3]                                           ; digit1[0]           ; yes                    ;
+; Number of user-specified and inferred latches = 43  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 1     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 1     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |MTran_Lab4_Verilog_7SegmentLed|HEX3 ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 21 LEs               ; 0 LEs                  ; No         ; |MTran_Lab4_Verilog_7SegmentLed|HEX0 ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |MTran_Lab4_Verilog_7SegmentLed|HEX1 ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |MTran_Lab4_Verilog_7SegmentLed|HEX2 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod1 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                ;
+; LPM_WIDTHD             ; 5              ; Untyped                ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_eho ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div1 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                ;
+; LPM_WIDTHD             ; 5              ; Untyped                ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_bpo ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                ;
+; LPM_WIDTHD             ; 5              ; Untyped                ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_eho ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                ;
+; LPM_WIDTHD             ; 8              ; Untyped                ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_epo ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 1                           ;
+;     CLR               ; 1                           ;
+; arriav_lcell_comb     ; 546                         ;
+;     arith             ; 249                         ;
+;         0 data inputs ; 55                          ;
+;         1 data inputs ; 28                          ;
+;         2 data inputs ; 30                          ;
+;         3 data inputs ; 81                          ;
+;         4 data inputs ; 55                          ;
+;     normal            ; 270                         ;
+;         2 data inputs ; 77                          ;
+;         3 data inputs ; 103                         ;
+;         4 data inputs ; 52                          ;
+;         5 data inputs ; 16                          ;
+;         6 data inputs ; 22                          ;
+;     shared            ; 27                          ;
+;         0 data inputs ; 18                          ;
+;         1 data inputs ; 9                           ;
+; boundary_port         ; 50                          ;
+;                       ;                             ;
+; Max LUT depth         ; 20.00                       ;
+; Average LUT depth     ; 14.54                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+    Info: Processing started: Thu May 30 22:21:32 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MTran_Lab4_Verilog_7SegmentLed -c MTran_Lab4_Verilog_7SegmentLed
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file mtran_lab4_verilog_7segmentled.v
+    Info (12023): Found entity 1: MTran_Lab4_Verilog_7SegmentLed File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 1
+Info (12127): Elaborating entity "MTran_Lab4_Verilog_7SegmentLed" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at MTran_Lab4_Verilog_7SegmentLed.v(12): object "num2_flag" assigned a value but never read File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 12
+Warning (10235): Verilog HDL Always Construct warning at MTran_Lab4_Verilog_7SegmentLed.v(100): variable "add_flag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Warning (10235): Verilog HDL Always Construct warning at MTran_Lab4_Verilog_7SegmentLed.v(102): variable "num1_flag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 102
+Warning (10235): Verilog HDL Always Construct warning at MTran_Lab4_Verilog_7SegmentLed.v(131): variable "num1" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 131
+Warning (10235): Verilog HDL Always Construct warning at MTran_Lab4_Verilog_7SegmentLed.v(131): variable "num2" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 131
+Warning (10235): Verilog HDL Always Construct warning at MTran_Lab4_Verilog_7SegmentLed.v(158): variable "err_num1" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 158
+Warning (10235): Verilog HDL Always Construct warning at MTran_Lab4_Verilog_7SegmentLed.v(158): variable "err_num2" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 158
+Warning (10240): Verilog HDL Always Construct warning at MTran_Lab4_Verilog_7SegmentLed.v(82): inferring latch(es) for variable "digit0", which holds its previous value in one or more paths through the always construct File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 82
+Warning (10240): Verilog HDL Always Construct warning at MTran_Lab4_Verilog_7SegmentLed.v(82): inferring latch(es) for variable "digit1", which holds its previous value in one or more paths through the always construct File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 82
+Warning (10240): Verilog HDL Always Construct warning at MTran_Lab4_Verilog_7SegmentLed.v(82): inferring latch(es) for variable "digit2", which holds its previous value in one or more paths through the always construct File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 82
+Warning (10240): Verilog HDL Always Construct warning at MTran_Lab4_Verilog_7SegmentLed.v(82): inferring latch(es) for variable "digit3", which holds its previous value in one or more paths through the always construct File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 82
+Warning (10240): Verilog HDL Always Construct warning at MTran_Lab4_Verilog_7SegmentLed.v(82): inferring latch(es) for variable "result", which holds its previous value in one or more paths through the always construct File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 82
+Warning (10240): Verilog HDL Always Construct warning at MTran_Lab4_Verilog_7SegmentLed.v(82): inferring latch(es) for variable "hundred", which holds its previous value in one or more paths through the always construct File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 82
+Warning (10240): Verilog HDL Always Construct warning at MTran_Lab4_Verilog_7SegmentLed.v(82): inferring latch(es) for variable "tenth", which holds its previous value in one or more paths through the always construct File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 82
+Warning (10240): Verilog HDL Always Construct warning at MTran_Lab4_Verilog_7SegmentLed.v(82): inferring latch(es) for variable "unit", which holds its previous value in one or more paths through the always construct File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 82
+Warning (10240): Verilog HDL Always Construct warning at MTran_Lab4_Verilog_7SegmentLed.v(170): inferring latch(es) for variable "num1_flag", which holds its previous value in one or more paths through the always construct File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 170
+Warning (10240): Verilog HDL Always Construct warning at MTran_Lab4_Verilog_7SegmentLed.v(170): inferring latch(es) for variable "err_num1", which holds its previous value in one or more paths through the always construct File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 170
+Warning (10240): Verilog HDL Always Construct warning at MTran_Lab4_Verilog_7SegmentLed.v(170): inferring latch(es) for variable "LED", which holds its previous value in one or more paths through the always construct File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 170
+Warning (10240): Verilog HDL Always Construct warning at MTran_Lab4_Verilog_7SegmentLed.v(170): inferring latch(es) for variable "num1", which holds its previous value in one or more paths through the always construct File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 170
+Warning (10240): Verilog HDL Always Construct warning at MTran_Lab4_Verilog_7SegmentLed.v(197): inferring latch(es) for variable "err_num2", which holds its previous value in one or more paths through the always construct File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 197
+Warning (10240): Verilog HDL Always Construct warning at MTran_Lab4_Verilog_7SegmentLed.v(197): inferring latch(es) for variable "LED", which holds its previous value in one or more paths through the always construct File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 197
+Warning (10240): Verilog HDL Always Construct warning at MTran_Lab4_Verilog_7SegmentLed.v(197): inferring latch(es) for variable "num2", which holds its previous value in one or more paths through the always construct File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 197
+Info (10041): Inferred latch for "err_num2[0]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "err_num2[1]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "err_num2[2]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "err_num2[3]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "err_num2[4]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "err_num2[5]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "err_num2[6]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "err_num2[7]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "err_num2[8]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "err_num2[9]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "err_num2[10]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "err_num2[11]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "err_num2[12]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "err_num2[13]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "err_num2[14]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "err_num2[15]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "err_num2[16]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "err_num2[17]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "err_num2[18]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "err_num2[19]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "err_num2[20]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "err_num2[21]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "err_num2[22]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "err_num2[23]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "err_num2[24]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "err_num2[25]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "err_num2[26]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "err_num2[27]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "err_num2[28]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "err_num2[29]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "err_num2[30]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "err_num2[31]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "LED[4]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "LED[5]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "LED[6]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "LED[7]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "num2[0]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "num2[1]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "num2[2]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "num2[3]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "num2[4]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "num2[5]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "num2[6]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "num2[7]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "num2[8]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "num2[9]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "num2[10]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "num2[11]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "num2[12]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "num2[13]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "num2[14]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "num2[15]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "num2[16]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "num2[17]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "num2[18]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "num2[19]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "num2[20]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "num2[21]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "num2[22]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "num2[23]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "num2[24]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "num2[25]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "num2[26]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "num2[27]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "num2[28]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "num2[29]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "num2[30]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "num2[31]" at MTran_Lab4_Verilog_7SegmentLed.v(208) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Info (10041): Inferred latch for "err_num1[0]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "err_num1[1]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "err_num1[2]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "err_num1[3]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "err_num1[4]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "err_num1[5]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "err_num1[6]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "err_num1[7]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "err_num1[8]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "err_num1[9]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "err_num1[10]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "err_num1[11]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "err_num1[12]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "err_num1[13]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "err_num1[14]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "err_num1[15]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "err_num1[16]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "err_num1[17]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "err_num1[18]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "err_num1[19]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "err_num1[20]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "err_num1[21]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "err_num1[22]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "err_num1[23]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "err_num1[24]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "err_num1[25]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "err_num1[26]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "err_num1[27]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "err_num1[28]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "err_num1[29]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "err_num1[30]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "err_num1[31]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "LED[0]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "LED[1]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "LED[2]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "LED[3]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "num1[0]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "num1[1]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "num1[2]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "num1[3]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "num1[4]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "num1[5]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "num1[6]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "num1[7]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "num1[8]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "num1[9]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "num1[10]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "num1[11]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "num1[12]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "num1[13]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "num1[14]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "num1[15]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "num1[16]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "num1[17]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "num1[18]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "num1[19]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "num1[20]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "num1[21]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "num1[22]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "num1[23]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "num1[24]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "num1[25]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "num1[26]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "num1[27]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "num1[28]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "num1[29]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "num1[30]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "num1[31]" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "num1_flag" at MTran_Lab4_Verilog_7SegmentLed.v(181) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+Info (10041): Inferred latch for "digit3[0]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit3[1]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit3[2]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit3[3]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit3[4]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit3[5]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit3[6]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit3[7]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit3[8]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit3[9]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit3[10]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit3[11]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit3[12]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit3[13]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit3[14]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit3[15]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit3[16]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit3[17]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit3[18]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit3[19]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit3[20]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit3[21]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit3[22]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit3[23]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit3[24]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit3[25]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit3[26]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit3[27]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit3[28]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit3[29]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit3[30]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit3[31]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit2[0]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit2[1]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit2[2]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit2[3]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit2[4]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit2[5]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit2[6]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit2[7]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit2[8]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit2[9]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit2[10]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit2[11]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit2[12]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit2[13]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit2[14]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit2[15]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit2[16]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit2[17]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit2[18]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit2[19]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit2[20]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit2[21]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit2[22]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit2[23]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit2[24]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit2[25]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit2[26]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit2[27]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit2[28]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit2[29]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit2[30]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit2[31]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit1[0]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit1[1]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit1[2]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit1[3]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit1[4]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit1[5]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit1[6]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit1[7]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit1[8]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit1[9]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit1[10]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit1[11]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit1[12]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit1[13]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit1[14]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit1[15]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit1[16]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit1[17]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit1[18]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit1[19]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit1[20]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit1[21]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit1[22]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit1[23]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit1[24]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit1[25]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit1[26]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit1[27]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit1[28]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit1[29]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit1[30]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit1[31]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit0[0]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit0[1]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit0[2]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit0[3]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit0[4]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit0[5]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit0[6]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit0[7]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit0[8]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit0[9]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit0[10]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit0[11]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit0[12]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit0[13]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit0[14]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit0[15]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit0[16]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit0[17]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit0[18]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit0[19]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit0[20]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit0[21]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit0[22]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit0[23]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit0[24]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit0[25]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit0[26]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit0[27]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit0[28]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit0[29]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit0[30]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (10041): Inferred latch for "digit0[31]" at MTran_Lab4_Verilog_7SegmentLed.v(100) File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 100
+Info (278001): Inferred 4 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod1" File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 134
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div1" File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 133
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 133
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 132
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod1" File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 134
+Info (12133): Instantiated megafunction "lpm_divide:Mod1" with the following parameter: File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 134
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_eho.tdf
+    Info (12023): Found entity 1: lpm_divide_eho File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/db/lpm_divide_eho.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_kbg.tdf
+    Info (12023): Found entity 1: abs_divider_kbg File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/db/abs_divider_kbg.tdf Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ove.tdf
+    Info (12023): Found entity 1: alt_u_div_ove File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/db/alt_u_div_ove.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_kn9.tdf
+    Info (12023): Found entity 1: lpm_abs_kn9 File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/db/lpm_abs_kn9.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_4p9.tdf
+    Info (12023): Found entity 1: lpm_abs_4p9 File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/db/lpm_abs_4p9.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div1" File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 133
+Info (12133): Instantiated megafunction "lpm_divide:Div1" with the following parameter: File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 133
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_bpo.tdf
+    Info (12023): Found entity 1: lpm_divide_bpo File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/db/lpm_divide_bpo.tdf Line: 25
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 133
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 133
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 132
+Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 132
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "8"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_epo.tdf
+    Info (12023): Found entity 1: lpm_divide_epo File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/db/lpm_divide_epo.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_nbg.tdf
+    Info (12023): Found entity 1: abs_divider_nbg File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/db/abs_divider_nbg.tdf Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_uve.tdf
+    Info (12023): Found entity 1: alt_u_div_uve File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/db/alt_u_div_uve.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_nn9.tdf
+    Info (12023): Found entity 1: lpm_abs_nn9 File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/db/lpm_abs_nn9.tdf Line: 23
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "LED[3]$latch" merged with LATCH primitive "LED[0]$latch" File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+    Info (13026): Duplicate LATCH primitive "LED[2]$latch" merged with LATCH primitive "LED[0]$latch" File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+    Info (13026): Duplicate LATCH primitive "LED[1]$latch" merged with LATCH primitive "LED[0]$latch" File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+    Info (13026): Duplicate LATCH primitive "err_num1[0]" merged with LATCH primitive "LED[0]$latch" File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+    Info (13026): Duplicate LATCH primitive "LED[7]$latch" merged with LATCH primitive "LED[4]$latch" File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+    Info (13026): Duplicate LATCH primitive "LED[6]$latch" merged with LATCH primitive "LED[4]$latch" File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+    Info (13026): Duplicate LATCH primitive "LED[5]$latch" merged with LATCH primitive "LED[4]$latch" File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+    Info (13026): Duplicate LATCH primitive "err_num2[0]" merged with LATCH primitive "LED[4]$latch" File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+Warning (13012): Latch LED[0]$latch has unsafe behavior File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 181
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BT[0] File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 3
+Warning (13012): Latch LED[4]$latch has unsafe behavior File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 208
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BT[1] File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 3
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[8]" File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 2
+Info (21057): Implemented 597 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 14 input pins
+    Info (21059): Implemented 36 output pins
+    Info (21061): Implemented 547 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 29 warnings
+    Info: Peak virtual memory: 4915 megabytes
+    Info: Processing ended: Thu May 30 22:21:42 2024
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:06
+
+

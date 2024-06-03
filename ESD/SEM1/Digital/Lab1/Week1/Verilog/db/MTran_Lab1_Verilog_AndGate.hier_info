@@ -1,0 +1,6 @@
+|MTran_Lab1_Verilog_AndGate
+a => comb.IN0
+b => comb.IN1
+y << comb.DB_MAX_OUTPUT_PORT_TYPE
+
+

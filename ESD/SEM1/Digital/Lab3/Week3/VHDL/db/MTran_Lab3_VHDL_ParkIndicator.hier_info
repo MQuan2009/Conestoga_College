@@ -1,0 +1,46 @@
+|MTran_Lab3_VHDL_ParkIndicator
+SW[0] => Mux7.IN69
+SW[0] => Mux8.IN69
+SW[0] => free_slot[5].OUTPUTSELECT
+SW[0] => free_slot[4].OUTPUTSELECT
+SW[0] => free_slot[3].OUTPUTSELECT
+SW[0] => free_slot[2].OUTPUTSELECT
+SW[0] => free_slot[1].OUTPUTSELECT
+SW[0] => free_slot[0].OUTPUTSELECT
+SW[1] => Mux7.IN68
+SW[1] => Mux8.IN68
+SW[1] => free_slot.OUTPUTSELECT
+SW[1] => free_slot.OUTPUTSELECT
+SW[1] => free_slot.OUTPUTSELECT
+SW[1] => free_slot.OUTPUTSELECT
+SW[1] => free_slot.OUTPUTSELECT
+SW[2] => Mux7.IN67
+SW[2] => Mux8.IN67
+SW[2] => free_slot.OUTPUTSELECT
+SW[2] => free_slot.OUTPUTSELECT
+SW[2] => free_slot.OUTPUTSELECT
+SW[2] => free_slot.OUTPUTSELECT
+SW[3] => Mux7.IN66
+SW[3] => Mux8.IN66
+SW[3] => free_slot.OUTPUTSELECT
+SW[3] => free_slot.OUTPUTSELECT
+SW[3] => free_slot.OUTPUTSELECT
+SW[4] => Mux7.IN65
+SW[4] => Mux8.IN65
+SW[4] => free_slot.OUTPUTSELECT
+SW[4] => free_slot.OUTPUTSELECT
+SW[5] => Mux7.IN64
+SW[5] => Mux8.IN64
+SW[5] => Add0.IN2
+SW[5] => free_slot.DATAA
+LED[1] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
+LED[0] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+HEX[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

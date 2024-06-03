@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ESD\\SEM1\\Embedded\\Week2\\Practical_Assignment_26\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{011523E0-7D2F-4CDA-A5C8-8B2F4157B035}|Practical_Assignment_26\\Practical_Assignment_26.vcxproj|D:\\ESD\\SEM1\\Embedded\\Week2\\Practical_Assignment_26\\Practical_Assignment_26\\Practical_Assignment_26.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{011523E0-7D2F-4CDA-A5C8-8B2F4157B035}|Practical_Assignment_26\\Practical_Assignment_26.vcxproj|solutionrelative:Practical_Assignment_26\\Practical_Assignment_26.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Practical_Assignment_26.cpp",
+              "DocumentMoniker": "D:\\ESD\\SEM1\\Embedded\\Week2\\Practical_Assignment_26\\Practical_Assignment_26\\Practical_Assignment_26.cpp",
+              "RelativeDocumentMoniker": "Practical_Assignment_26\\Practical_Assignment_26.cpp",
+              "ToolTip": "D:\\ESD\\SEM1\\Embedded\\Week2\\Practical_Assignment_26\\Practical_Assignment_26\\Practical_Assignment_26.cpp",
+              "RelativeToolTip": "Practical_Assignment_26\\Practical_Assignment_26.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-17T00:29:40.833Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

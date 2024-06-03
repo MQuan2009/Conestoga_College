@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at MTran_Lab4_Verilog_7SegmentLed.v(170): always construct contains both blocking and non-blocking assignments File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 170
+Warning (10268): Verilog HDL information at MTran_Lab4_Verilog_7SegmentLed.v(196): always construct contains both blocking and non-blocking assignments File: D:/ESD/SEM1/Digital/Lab4/Week4/Verilog/MTran_Lab4_Verilog_7SegmentLed.v Line: 196
