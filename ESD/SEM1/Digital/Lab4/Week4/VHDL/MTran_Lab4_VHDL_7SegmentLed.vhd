@@ -48,7 +48,7 @@ begin
 	end case;
 end SevenSegmentDisplay;
  
--- Displaying Digit
+-- Displaying Digit --myfunction(int a, int b)
 function DigitDisplay(Switch : std_logic_vector (3 downto 0);dig : integer) return std_logic_vector is
 begin
 	if (dig <= 9) then return SevenSegmentDisplay(Switch);
