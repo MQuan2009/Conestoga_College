@@ -1,0 +1,14 @@
+module MTran_Lab6_Verilog_HalfSubtractor(
+		input  wire [3:0] A,
+		input  wire [3:0] B,
+		output reg  [3:0] Difference,
+		output reg  [3:0] Borrow
+);
+
+always @*
+begin
+	Difference = A ^ B;
+	Borrow = (~A) & B;
+end 
+
+endmodule

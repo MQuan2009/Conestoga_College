@@ -1,0 +1,600 @@
+Analysis & Synthesis report for MTran_Lab6_VHDL_Adder
+Thu Jul  4 18:50:19 2024
+Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
+ 12. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++---------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Thu Jul  4 18:50:19 2024          ;
+; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
+; Revision Name                   ; MTran_Lab6_VHDL_Adder                          ;
+; Top-level Entity Name           ; MTran_Lab6_VHDL_Adder                          ;
+; Family                          ; Cyclone V                                      ;
+; Logic utilization (in ALMs)     ; N/A                                            ;
+; Total registers                 ; 0                                              ;
+; Total pins                      ; 32                                             ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 0                                              ;
+; Total DSP Blocks                ; 0                                              ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 0                                              ;
+; Total DLLs                      ; 0                                              ;
++---------------------------------+------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                                   ;
++---------------------------------------------------------------------------------+-----------------------+-----------------------+
+; Option                                                                          ; Setting               ; Default Value         ;
++---------------------------------------------------------------------------------+-----------------------+-----------------------+
+; Device                                                                          ; 5CSEMA5F31C6          ;                       ;
+; Top-level entity name                                                           ; MTran_Lab6_VHDL_Adder ; MTran_Lab6_VHDL_Adder ;
+; Family name                                                                     ; Cyclone V             ; Cyclone V             ;
+; Use smart compilation                                                           ; Off                   ; Off                   ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                    ; On                    ;
+; Enable compact report table                                                     ; Off                   ; Off                   ;
+; Restructure Multiplexers                                                        ; Auto                  ; Auto                  ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                   ; Off                   ;
+; Create Debugging Nodes for IP Cores                                             ; Off                   ; Off                   ;
+; Preserve fewer node names                                                       ; On                    ; On                    ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable                ; Enable                ;
+; Verilog Version                                                                 ; Verilog_2001          ; Verilog_2001          ;
+; VHDL Version                                                                    ; VHDL_1993             ; VHDL_1993             ;
+; State Machine Processing                                                        ; Auto                  ; Auto                  ;
+; Safe State Machine                                                              ; Off                   ; Off                   ;
+; Extract Verilog State Machines                                                  ; On                    ; On                    ;
+; Extract VHDL State Machines                                                     ; On                    ; On                    ;
+; Ignore Verilog initial constructs                                               ; Off                   ; Off                   ;
+; Iteration limit for constant Verilog loops                                      ; 5000                  ; 5000                  ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                   ; 250                   ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                    ; On                    ;
+; Infer RAMs from Raw Logic                                                       ; On                    ; On                    ;
+; Parallel Synthesis                                                              ; On                    ; On                    ;
+; DSP Block Balancing                                                             ; Auto                  ; Auto                  ;
+; NOT Gate Push-Back                                                              ; On                    ; On                    ;
+; Power-Up Don't Care                                                             ; On                    ; On                    ;
+; Remove Redundant Logic Cells                                                    ; Off                   ; Off                   ;
+; Remove Duplicate Registers                                                      ; On                    ; On                    ;
+; Ignore CARRY Buffers                                                            ; Off                   ; Off                   ;
+; Ignore CASCADE Buffers                                                          ; Off                   ; Off                   ;
+; Ignore GLOBAL Buffers                                                           ; Off                   ; Off                   ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                   ; Off                   ;
+; Ignore LCELL Buffers                                                            ; Off                   ; Off                   ;
+; Ignore SOFT Buffers                                                             ; On                    ; On                    ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                   ; Off                   ;
+; Optimization Technique                                                          ; Balanced              ; Balanced              ;
+; Carry Chain Length                                                              ; 70                    ; 70                    ;
+; Auto Carry Chains                                                               ; On                    ; On                    ;
+; Auto Open-Drain Pins                                                            ; On                    ; On                    ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                   ; Off                   ;
+; Auto ROM Replacement                                                            ; On                    ; On                    ;
+; Auto RAM Replacement                                                            ; On                    ; On                    ;
+; Auto DSP Block Replacement                                                      ; On                    ; On                    ;
+; Auto Shift Register Replacement                                                 ; Auto                  ; Auto                  ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto                  ; Auto                  ;
+; Auto Clock Enable Replacement                                                   ; On                    ; On                    ;
+; Strict RAM Replacement                                                          ; Off                   ; Off                   ;
+; Allow Synchronous Control Signals                                               ; On                    ; On                    ;
+; Force Use of Synchronous Clear Signals                                          ; Off                   ; Off                   ;
+; Auto Resource Sharing                                                           ; Off                   ; Off                   ;
+; Allow Any RAM Size For Recognition                                              ; Off                   ; Off                   ;
+; Allow Any ROM Size For Recognition                                              ; Off                   ; Off                   ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                   ; Off                   ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                    ; On                    ;
+; Ignore translate_off and synthesis_off directives                               ; Off                   ; Off                   ;
+; Timing-Driven Synthesis                                                         ; On                    ; On                    ;
+; Report Parameter Settings                                                       ; On                    ; On                    ;
+; Report Source Assignments                                                       ; On                    ; On                    ;
+; Report Connectivity Checks                                                      ; On                    ; On                    ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                   ; Off                   ;
+; Synchronization Register Chain Length                                           ; 3                     ; 3                     ;
+; Power Optimization During Synthesis                                             ; Normal compilation    ; Normal compilation    ;
+; HDL message level                                                               ; Level2                ; Level2                ;
+; Suppress Register Optimization Related Messages                                 ; Off                   ; Off                   ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000                  ; 5000                  ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000                  ; 5000                  ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                   ; 100                   ;
+; Clock MUX Protection                                                            ; On                    ; On                    ;
+; Auto Gated Clock Conversion                                                     ; Off                   ; Off                   ;
+; Block Design Naming                                                             ; Auto                  ; Auto                  ;
+; SDC constraint protection                                                       ; Off                   ; Off                   ;
+; Synthesis Effort                                                                ; Auto                  ; Auto                  ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                    ; On                    ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                   ; Off                   ;
+; Analysis & Synthesis Message Level                                              ; Medium                ; Medium                ;
+; Disable Register Merging Across Hierarchies                                     ; Auto                  ; Auto                  ;
+; Resource Aware Inference For Block RAM                                          ; On                    ; On                    ;
+; Automatic Parallel Synthesis                                                    ; On                    ; On                    ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                   ; Off                   ;
++---------------------------------------------------------------------------------+-----------------------+-----------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 10          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 10          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-10        ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                  ;
++------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path   ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                            ; Library ;
++------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------+---------+
+; MTran_Lab6_VHDL_Adder.vhd          ; yes             ; User VHDL File               ; D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd          ;         ;
+; MTran_Lab6_VHDL_FullAdder.vhd      ; yes             ; User VHDL File               ; D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_FullAdder.vhd      ;         ;
+; MTran_Lab6_VHDL_HalfAdder.vhd      ; yes             ; User VHDL File               ; D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_HalfAdder.vhd      ;         ;
+; MTran_Lab6_VHDL_HalfSubtractor.vhd ; yes             ; User VHDL File               ; D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_HalfSubtractor.vhd ;         ;
+; lpm_divide.tdf                     ; yes             ; Megafunction                 ; d:/software/intelfpga_lite/quartus/libraries/megafunctions/lpm_divide.tdf               ;         ;
+; abs_divider.inc                    ; yes             ; Megafunction                 ; d:/software/intelfpga_lite/quartus/libraries/megafunctions/abs_divider.inc              ;         ;
+; sign_div_unsign.inc                ; yes             ; Megafunction                 ; d:/software/intelfpga_lite/quartus/libraries/megafunctions/sign_div_unsign.inc          ;         ;
+; aglobal231.inc                     ; yes             ; Megafunction                 ; d:/software/intelfpga_lite/quartus/libraries/megafunctions/aglobal231.inc               ;         ;
+; db/lpm_divide_bpo.tdf              ; yes             ; Auto-Generated Megafunction  ; D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/db/lpm_divide_bpo.tdf              ;         ;
+; db/abs_divider_kbg.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/db/abs_divider_kbg.tdf             ;         ;
+; db/alt_u_div_ove.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/db/alt_u_div_ove.tdf               ;         ;
+; db/lpm_abs_kn9.tdf                 ; yes             ; Auto-Generated Megafunction  ; D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/db/lpm_abs_kn9.tdf                 ;         ;
+; db/lpm_abs_4p9.tdf                 ; yes             ; Auto-Generated Megafunction  ; D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/db/lpm_abs_4p9.tdf                 ;         ;
+; db/lpm_divide_uio.tdf              ; yes             ; Auto-Generated Megafunction  ; D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/db/lpm_divide_uio.tdf              ;         ;
+; db/abs_divider_4dg.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/db/abs_divider_4dg.tdf             ;         ;
+; db/alt_u_div_o2f.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/db/alt_u_div_o2f.tdf               ;         ;
++------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                 ;
++---------------------------------------------+---------------+
+; Resource                                    ; Usage         ;
++---------------------------------------------+---------------+
+; Estimate of Logic utilization (ALMs needed) ; 133           ;
+;                                             ;               ;
+; Combinational ALUT usage for logic          ; 248           ;
+;     -- 7 input functions                    ; 0             ;
+;     -- 6 input functions                    ; 18            ;
+;     -- 5 input functions                    ; 18            ;
+;     -- 4 input functions                    ; 44            ;
+;     -- <=3 input functions                  ; 168           ;
+;                                             ;               ;
+; Dedicated logic registers                   ; 0             ;
+;                                             ;               ;
+; I/O pins                                    ; 32            ;
+;                                             ;               ;
+; Total DSP Blocks                            ; 0             ;
+;                                             ;               ;
+; Maximum fan-out node                        ; mode[9]~input ;
+; Maximum fan-out                             ; 65            ;
+; Total fan-out                               ; 833           ;
+; Average fan-out                             ; 2.67          ;
++---------------------------------------------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                              ;
++----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------+--------------------------------+--------------+
+; Compilation Hierarchy Node                         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                ; Entity Name                    ; Library Name ;
++----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------+--------------------------------+--------------+
+; |MTran_Lab6_VHDL_Adder                             ; 248 (71)            ; 0 (0)                     ; 0                 ; 0          ; 32   ; 0            ; |MTran_Lab6_VHDL_Adder                                                                                             ; MTran_Lab6_VHDL_Adder          ; work         ;
+;    |MTran_Lab6_VHDL_FullAdder:FullAdder|           ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MTran_Lab6_VHDL_Adder|MTran_Lab6_VHDL_FullAdder:FullAdder                                                         ; MTran_Lab6_VHDL_FullAdder      ; work         ;
+;    |MTran_Lab6_VHDL_HalfSubtractor:HalfSubtractor| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MTran_Lab6_VHDL_Adder|MTran_Lab6_VHDL_HalfSubtractor:HalfSubtractor                                               ; MTran_Lab6_VHDL_HalfSubtractor ; work         ;
+;    |lpm_divide:Div0|                               ; 40 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MTran_Lab6_VHDL_Adder|lpm_divide:Div0                                                                             ; lpm_divide                     ; work         ;
+;       |lpm_divide_bpo:auto_generated|              ; 40 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MTran_Lab6_VHDL_Adder|lpm_divide:Div0|lpm_divide_bpo:auto_generated                                               ; lpm_divide_bpo                 ; work         ;
+;          |abs_divider_kbg:divider|                 ; 40 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MTran_Lab6_VHDL_Adder|lpm_divide:Div0|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider                       ; abs_divider_kbg                ; work         ;
+;             |alt_u_div_ove:divider|                ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MTran_Lab6_VHDL_Adder|lpm_divide:Div0|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|alt_u_div_ove:divider ; alt_u_div_ove                  ; work         ;
+;    |lpm_divide:Mod0|                               ; 127 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MTran_Lab6_VHDL_Adder|lpm_divide:Mod0                                                                             ; lpm_divide                     ; work         ;
+;       |lpm_divide_uio:auto_generated|              ; 127 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MTran_Lab6_VHDL_Adder|lpm_divide:Mod0|lpm_divide_uio:auto_generated                                               ; lpm_divide_uio                 ; work         ;
+;          |abs_divider_4dg:divider|                 ; 127 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MTran_Lab6_VHDL_Adder|lpm_divide:Mod0|lpm_divide_uio:auto_generated|abs_divider_4dg:divider                       ; abs_divider_4dg                ; work         ;
+;             |alt_u_div_o2f:divider|                ; 127 (127)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MTran_Lab6_VHDL_Adder|lpm_divide:Mod0|lpm_divide_uio:auto_generated|abs_divider_4dg:divider|alt_u_div_o2f:divider ; alt_u_div_o2f                  ; work         ;
++----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------+--------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; Cin_FA                                              ; mode[9]             ; yes                    ;
+; tenth[0]                                            ; mode[9]             ; yes                    ;
+; tenth[1]                                            ; mode[9]             ; yes                    ;
+; tenth[2]                                            ; mode[9]             ; yes                    ;
+; tenth[3]                                            ; mode[9]             ; yes                    ;
+; unit[9]                                             ; mode[9]             ; yes                    ;
+; unit[8]                                             ; mode[9]             ; yes                    ;
+; unit[7]                                             ; mode[9]             ; yes                    ;
+; unit[6]                                             ; mode[9]             ; yes                    ;
+; unit[5]                                             ; mode[9]             ; yes                    ;
+; unit[4]                                             ; mode[9]             ; yes                    ;
+; unit[3]                                             ; mode[9]             ; yes                    ;
+; unit[2]                                             ; mode[9]             ; yes                    ;
+; unit[1]                                             ; mode[9]             ; yes                    ;
+; unit[0]                                             ; mode[9]             ; yes                    ;
+; unit[11]                                            ; mode[9]             ; yes                    ;
+; unit[12]                                            ; mode[9]             ; yes                    ;
+; unit[13]                                            ; mode[9]             ; yes                    ;
+; unit[14]                                            ; mode[9]             ; yes                    ;
+; unit[15]                                            ; mode[9]             ; yes                    ;
+; unit[16]                                            ; mode[9]             ; yes                    ;
+; unit[17]                                            ; mode[9]             ; yes                    ;
+; unit[18]                                            ; mode[9]             ; yes                    ;
+; unit[19]                                            ; mode[9]             ; yes                    ;
+; unit[20]                                            ; mode[9]             ; yes                    ;
+; unit[21]                                            ; mode[9]             ; yes                    ;
+; unit[22]                                            ; mode[9]             ; yes                    ;
+; unit[23]                                            ; mode[9]             ; yes                    ;
+; unit[24]                                            ; mode[9]             ; yes                    ;
+; unit[25]                                            ; mode[9]             ; yes                    ;
+; unit[26]                                            ; mode[9]             ; yes                    ;
+; unit[27]                                            ; mode[9]             ; yes                    ;
+; unit[28]                                            ; mode[9]             ; yes                    ;
+; unit[29]                                            ; mode[9]             ; yes                    ;
+; unit[30]                                            ; mode[9]             ; yes                    ;
+; unit[31]                                            ; mode[9]             ; yes                    ;
+; unit[10]                                            ; mode[9]             ; yes                    ;
+; TotalSum[4]                                         ; mode[9]             ; yes                    ;
+; TotalSum[3]                                         ; mode[9]             ; yes                    ;
+; TotalSum[2]                                         ; mode[9]             ; yes                    ;
+; TotalSum[1]                                         ; mode[9]             ; yes                    ;
+; TotalSum[0]                                         ; mode[9]             ; yes                    ;
+; Number of user-specified and inferred latches = 42  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |MTran_Lab6_VHDL_Adder|LED  ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |MTran_Lab6_VHDL_Adder|HEX1 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |MTran_Lab6_VHDL_Adder|LED  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                ;
+; LPM_WIDTHD             ; 5              ; Untyped                ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_bpo ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                ;
+; LPM_WIDTHD             ; 32             ; Untyped                ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_uio ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 249                         ;
+;     arith             ; 100                         ;
+;         0 data inputs ; 36                          ;
+;         1 data inputs ; 8                           ;
+;         2 data inputs ; 32                          ;
+;         3 data inputs ; 13                          ;
+;         4 data inputs ; 11                          ;
+;     normal            ; 137                         ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 15                          ;
+;         3 data inputs ; 52                          ;
+;         4 data inputs ; 33                          ;
+;         5 data inputs ; 18                          ;
+;         6 data inputs ; 18                          ;
+;     shared            ; 12                          ;
+;         0 data inputs ; 8                           ;
+;         1 data inputs ; 4                           ;
+; boundary_port         ; 32                          ;
+;                       ;                             ;
+; Max LUT depth         ; 15.10                       ;
+; Average LUT depth     ; 10.17                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+    Info: Processing started: Thu Jul  4 18:50:11 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MTran_Lab6_VHDL_Adder -c MTran_Lab6_VHDL_Adder
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file mtran_lab6_vhdl_adder.vhd
+    Info (12022): Found design unit 1: MTran_Lab6_VHDL_Adder-Behavioral File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 18
+    Info (12023): Found entity 1: MTran_Lab6_VHDL_Adder File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file mtran_lab6_vhdl_fulladder.vhd
+    Info (12022): Found design unit 1: MTran_Lab6_VHDL_FullAdder-Behavioral File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_FullAdder.vhd Line: 15
+    Info (12023): Found entity 1: MTran_Lab6_VHDL_FullAdder File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_FullAdder.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mtran_lab6_vhdl_halfadder.vhd
+    Info (12022): Found design unit 1: MTran_Lab6_VHDL_HalfAdder-Behavioral File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_HalfAdder.vhd Line: 14
+    Info (12023): Found entity 1: MTran_Lab6_VHDL_HalfAdder File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_HalfAdder.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mtran_lab6_vhdl_halfsubtractor.vhd
+    Info (12022): Found design unit 1: MTran_Lab6_VHDL_HalfSubtractor-Behavioral File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_HalfSubtractor.vhd Line: 14
+    Info (12023): Found entity 1: MTran_Lab6_VHDL_HalfSubtractor File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_HalfSubtractor.vhd Line: 4
+Info (12127): Elaborating entity "MTran_Lab6_VHDL_Adder" for the top level hierarchy
+Warning (10492): VHDL Process Statement warning at MTran_Lab6_VHDL_Adder.vhd(138): signal "Sum_HA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 138
+Warning (10492): VHDL Process Statement warning at MTran_Lab6_VHDL_Adder.vhd(139): signal "Carry_HA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 139
+Warning (10492): VHDL Process Statement warning at MTran_Lab6_VHDL_Adder.vhd(141): signal "Difference_HS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 141
+Warning (10492): VHDL Process Statement warning at MTran_Lab6_VHDL_Adder.vhd(142): signal "Borrow_HS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 142
+Warning (10492): VHDL Process Statement warning at MTran_Lab6_VHDL_Adder.vhd(145): signal "Sum_FA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 145
+Warning (10492): VHDL Process Statement warning at MTran_Lab6_VHDL_Adder.vhd(146): signal "Carry_FA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 146
+Warning (10492): VHDL Process Statement warning at MTran_Lab6_VHDL_Adder.vhd(148): signal "Carry_FA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 148
+Warning (10492): VHDL Process Statement warning at MTran_Lab6_VHDL_Adder.vhd(148): signal "Sum_FA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 148
+Warning (10492): VHDL Process Statement warning at MTran_Lab6_VHDL_Adder.vhd(149): signal "TotalSum" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 149
+Warning (10492): VHDL Process Statement warning at MTran_Lab6_VHDL_Adder.vhd(150): signal "TotalSum" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 150
+Warning (10492): VHDL Process Statement warning at MTran_Lab6_VHDL_Adder.vhd(152): signal "tenth" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 152
+Warning (10492): VHDL Process Statement warning at MTran_Lab6_VHDL_Adder.vhd(153): signal "unit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 153
+Warning (10492): VHDL Process Statement warning at MTran_Lab6_VHDL_Adder.vhd(156): signal "Sum_FA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 156
+Warning (10492): VHDL Process Statement warning at MTran_Lab6_VHDL_Adder.vhd(157): signal "Carry_FA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 157
+Warning (10492): VHDL Process Statement warning at MTran_Lab6_VHDL_Adder.vhd(159): signal "Carry_FA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 159
+Warning (10492): VHDL Process Statement warning at MTran_Lab6_VHDL_Adder.vhd(159): signal "Sum_FA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 159
+Warning (10492): VHDL Process Statement warning at MTran_Lab6_VHDL_Adder.vhd(160): signal "TotalSum" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 160
+Warning (10492): VHDL Process Statement warning at MTran_Lab6_VHDL_Adder.vhd(161): signal "TotalSum" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 161
+Warning (10492): VHDL Process Statement warning at MTran_Lab6_VHDL_Adder.vhd(163): signal "tenth" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 163
+Warning (10492): VHDL Process Statement warning at MTran_Lab6_VHDL_Adder.vhd(164): signal "unit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 164
+Warning (10631): VHDL Process Statement warning at MTran_Lab6_VHDL_Adder.vhd(129): inferring latch(es) for signal or variable "Cin_FA", which holds its previous value in one or more paths through the process File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Warning (10631): VHDL Process Statement warning at MTran_Lab6_VHDL_Adder.vhd(129): inferring latch(es) for signal or variable "TotalSum", which holds its previous value in one or more paths through the process File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Warning (10631): VHDL Process Statement warning at MTran_Lab6_VHDL_Adder.vhd(129): inferring latch(es) for signal or variable "tenth", which holds its previous value in one or more paths through the process File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Warning (10631): VHDL Process Statement warning at MTran_Lab6_VHDL_Adder.vhd(129): inferring latch(es) for signal or variable "unit", which holds its previous value in one or more paths through the process File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "unit[0]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "unit[1]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "unit[2]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "unit[3]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "unit[4]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "unit[5]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "unit[6]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "unit[7]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "unit[8]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "unit[9]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "unit[10]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "unit[11]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "unit[12]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "unit[13]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "unit[14]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "unit[15]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "unit[16]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "unit[17]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "unit[18]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "unit[19]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "unit[20]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "unit[21]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "unit[22]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "unit[23]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "unit[24]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "unit[25]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "unit[26]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "unit[27]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "unit[28]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "unit[29]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "unit[30]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "unit[31]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "tenth[0]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "tenth[1]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "tenth[2]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "tenth[3]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "tenth[4]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "tenth[5]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "tenth[6]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "tenth[7]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "tenth[8]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "tenth[9]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "tenth[10]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "tenth[11]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "tenth[12]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "tenth[13]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "tenth[14]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "tenth[15]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "tenth[16]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "tenth[17]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "tenth[18]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "tenth[19]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "tenth[20]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "tenth[21]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "tenth[22]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "tenth[23]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "tenth[24]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "tenth[25]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "tenth[26]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "tenth[27]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "tenth[28]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "tenth[29]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "tenth[30]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "tenth[31]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "TotalSum[0]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "TotalSum[1]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "TotalSum[2]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "TotalSum[3]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "TotalSum[4]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "TotalSum[5]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "TotalSum[6]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "TotalSum[7]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "TotalSum[8]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "TotalSum[9]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "TotalSum[10]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "TotalSum[11]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "TotalSum[12]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "TotalSum[13]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "TotalSum[14]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "TotalSum[15]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "TotalSum[16]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "TotalSum[17]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "TotalSum[18]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "TotalSum[19]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "TotalSum[20]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "TotalSum[21]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "TotalSum[22]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "TotalSum[23]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "TotalSum[24]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "TotalSum[25]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "TotalSum[26]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "TotalSum[27]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "TotalSum[28]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "TotalSum[29]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "TotalSum[30]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "TotalSum[31]" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (10041): Inferred latch for "Cin_FA" at MTran_Lab6_VHDL_Adder.vhd(129) File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 129
+Info (12128): Elaborating entity "MTran_Lab6_VHDL_HalfAdder" for hierarchy "MTran_Lab6_VHDL_HalfAdder:HalfAdder" File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 103
+Info (12128): Elaborating entity "MTran_Lab6_VHDL_HalfSubtractor" for hierarchy "MTran_Lab6_VHDL_HalfSubtractor:HalfSubtractor" File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 111
+Info (12128): Elaborating entity "MTran_Lab6_VHDL_FullAdder" for hierarchy "MTran_Lab6_VHDL_FullAdder:FullAdder" File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 119
+Info (278001): Inferred 2 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 160
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 161
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 160
+Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 160
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_bpo.tdf
+    Info (12023): Found entity 1: lpm_divide_bpo File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/db/lpm_divide_bpo.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_kbg.tdf
+    Info (12023): Found entity 1: abs_divider_kbg File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/db/abs_divider_kbg.tdf Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ove.tdf
+    Info (12023): Found entity 1: alt_u_div_ove File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/db/alt_u_div_ove.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_kn9.tdf
+    Info (12023): Found entity 1: lpm_abs_kn9 File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/db/lpm_abs_kn9.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_4p9.tdf
+    Info (12023): Found entity 1: lpm_abs_4p9 File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/db/lpm_abs_4p9.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 161
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/MTran_Lab6_VHDL_Adder.vhd Line: 161
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "32"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_uio.tdf
+    Info (12023): Found entity 1: lpm_divide_uio File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/db/lpm_divide_uio.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_4dg.tdf
+    Info (12023): Found entity 1: abs_divider_4dg File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/db/abs_divider_4dg.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_o2f.tdf
+    Info (12023): Found entity 1: alt_u_div_o2f File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab6/Week6/VHDL/db/alt_u_div_o2f.tdf Line: 23
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 280 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 10 input pins
+    Info (21059): Implemented 22 output pins
+    Info (21061): Implemented 248 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 25 warnings
+    Info: Peak virtual memory: 4936 megabytes
+    Info: Processing ended: Thu Jul  4 18:50:19 2024
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:05
+
+
