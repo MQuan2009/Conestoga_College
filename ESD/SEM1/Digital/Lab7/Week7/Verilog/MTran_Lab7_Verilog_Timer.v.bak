@@ -1,0 +1,63 @@
+module MTran_Lab7_Verilog_Timer (
+    input wire Clk,
+    input wire Enable,
+    inout [31:0] Seconds,
+    inout [31:0] Minutes,
+    inout [31:0] Hours
+);
+
+// Signal Declaration
+reg [31:0] Ticks = 0;
+
+// Procedure
+// Verilog does not directly support procedures like VHDL, so we'll implement Increment functionality inline
+function automatic void Increment;
+    input output [31:0] Counter;
+    input integer MaxValue;
+    output reg ResetFlag;
+    begin
+        if (Counter == MaxValue - 1) begin
+            // Reset Counter
+            Counter <= 0;
+            ResetFlag = 1'b1;
+        end else begin
+            Counter <= Counter + 1;
+            ResetFlag = 1'b0;
+        end
+    endfunction
+
+// Variable Declarations
+reg SecondsFlag = 0;
+reg MinutesFlag = 0;
+reg HoursFlag = 0;
+
+// Constants
+localparam integer MaxSeconds = 60;
+localparam integer MaxMinutes = 60;
+localparam integer MaxHours = 24;
+localparam integer ClockFrequency = 50000000;
+
+// Main Logic
+always @(posedge Clk) begin
+    if (Enable) begin
+        // Increment Ticks
+        Increment(Ticks, ClockFrequency, SecondsFlag);
+
+        // Increment Seconds whenever Ticks reach Clock Frequency
+        if (SecondsFlag) begin
+            Increment(Seconds, MaxSeconds, MinutesFlag);
+        end
+
+        // Increment Minutes whenever 60 seconds
+        if (SecondsFlag && MinutesFlag) begin
+            Increment(Minutes, MaxMinutes, HoursFlag);
+        end
+
+        // Increment Hours whenever 60 minutes
+        if (SecondsFlag && MinutesFlag && HoursFlag) begin
+            Increment(Hours, MaxHours, HoursFlag);
+        end
+    end
+end
+
+endmodule

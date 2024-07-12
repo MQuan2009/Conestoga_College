@@ -1,0 +1,75 @@
+library ieee;
+use ieee.std_logic_1164.ALL;
+
+entity MTran_Lab7_VHDL_Timer is
+generic (clockFrequency: integer)
+port
+(
+	-- Inputs
+	Clk : in std_logic;
+	
+	-- Outputs
+	Seconds : inout integer := 0;
+	Minutes : inout integer := 0;
+	Hours   : inout integer := 0
+	
+);
+end entity;
+
+architecture RTL in MTran_Lab7_VHDL_Timer is
+
+-- Signal Declaration
+signal Ticks            : integer := 0;
+constant ClockFrequency : integer := 50000000;
+
+-- Procedure
+procedure Increment( signal   Counter   : inout integer;
+							constant MaxValue  : in    integer;
+							signal   ResetFlag : inout boolean)
+begin
+	if Counter = MaxValue - 1 then
+		-- Reset Counter
+		Counter  <= 0;
+		ResetFlag := True;
+	else
+		Counter <= Counter + 1;
+		ResetFlag := False;
+end procedure;
+
+
+
+
+begin
+	
+	process(Clk) is
+	
+	-- Variable Declaring
+	variable SecondsFlag : boolean := false;
+	variable MinutesFlag : boolean := false;
+	variable HoursFlag   : boolean := false;
+	
+	-- Main
+	begin
+	if rising_edge(Clk) then
+		
+		-- Count Ticks
+		Increment(Ticks, ClockFrequency, SecondsFlag);
+		
+		-- Increment Seconds whenever Ticks reach Clock Frequency
+		if SecondsFlag then
+			Increment(Seconds, 60, MinutesFlag);
+		end if;
+		
+		-- Increment Minute whenever 60 seconds
+		if MinutesFlag then
+			Increment(Minutes, 60, HoursFlag);
+		end if;
+		
+		-- Increment Hours whenever 60 minutes
+		if HoursFlag then 
+			Increment(Hours, 24, HoursFlag);
+		end if;
+	end if;
+		
+	end process;
+end architecture;
