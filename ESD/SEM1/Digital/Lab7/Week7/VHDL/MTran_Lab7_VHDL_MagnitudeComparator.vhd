@@ -76,7 +76,7 @@ begin
 	module_timer: MTran_Lab7_VHDL_Timer
 	port map
 	(
-		Clk 	  => CLOCK_50,
+		Clk 	=> CLOCK_50,
 		Enable  => Enable,
 		Seconds => Seconds,
 		Minutes => Minutes,

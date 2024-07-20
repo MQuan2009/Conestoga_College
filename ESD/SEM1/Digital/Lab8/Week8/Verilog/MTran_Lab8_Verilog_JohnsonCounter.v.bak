@@ -1,0 +1,91 @@
+module
+(
+	// Inputs
+	input wire CLK,
+	input wire Reset,
+	input wire Complement,
+	
+	// Outputs
+	output reg [3:0] Q,
+	output reg [2:0] StateNumber
+	
+);
+
+// Signal Declaration
+wire [2:0] state;
+wire complementMode;
+wire [3:0] Output;
+
+// Function Declaration
+function [2:0] Increment;
+	input [2:0] Counter;
+	begin
+	if (Counter < 7)
+		begin
+			Increment = Increment + 1;
+		end
+	else 
+		begin
+			Increment = 0;
+		end
+	end 
+endfunction
+
+// Process
+
+// Check CLK and Reset
+always @ (CLK, Reset)
+begin
+	if (Reset == 0)
+		begin
+			state = 0;
+		end
+	else
+		begin
+			if (posedge(CLK))
+			begin
+				state = Increment(state);
+			end
+		end
+	end
+end
+
+// Check Complement
+always @ (posedge(Complement))
+begin
+	complementMode = ~complementMode;
+end
+
+always @ (complementMode)
+begin
+	if (complementMode == 1)
+		begin
+			Q = ~Output;
+		end
+	else
+		begin
+			Q = Output;
+		end
+end
+
+//
+always @(state, complementMode)
+begin
+    case(state)
+        0		: Output = 4'b0000;
+        1		: Output = 4'b1000;
+        2		: Output = 4'b1100;
+        3		: Output = 4'b1110;
+        4		: Output = 4'b1111;
+        5		: Output = 4'b0111;
+        6		: Output = 4'b0011;
+        7		: Output = 4'b0001;
+        default: Output = 4'b0000;
+    endcase
+
+    StateNumber = state;
+end
+
+
+
+	

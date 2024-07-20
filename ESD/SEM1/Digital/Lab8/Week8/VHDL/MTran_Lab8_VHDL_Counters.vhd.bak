@@ -1,0 +1,96 @@
+library ieee;
+use ieee.std_logic_1164.ALL;
+
+entity MTran_Lab8_VHDL_Counters is
+port
+(
+	-- Inputs
+	BTN         : in std_logic;
+	Reset       : in std_logic;
+	
+	-- Outputs
+	LED_Ring 	: out std_logic_vector (3 downto 0);
+	LED_Johnson : out std_logic_vector (3 downto 0);
+	
+	HEX0        : out std_logic_vector (6 downto 0);
+	HEX4        : out std_logic_vector (6 downto 0)
+	
+);
+
+architecture Behavioral of MTran_Lab8_VHDL_Counters is
+
+-- Module Declaration
+entity MTran_Lab8_VHDL_RingCounter is
+port
+(
+	-- Inputs
+	CLK    : in std_logic;
+	Reset  : in std_logic;
+	
+	-- Outputs
+	Output : out std_logic_vector (3 downto 0)
+	
+);
+
+entity MTran_Lab8_VHDL_JohnsonCounter is
+port
+(
+	-- Inputs
+	CLK    : in std_logic;
+	Reset  : in std_logic;
+	
+	-- Outputs
+	Output : out std_logic_vector (3 downto 0)
+	
+)
+
+-- Function declaration
+function SevenSegmentDisplay (Number : integer) return std_logic_vector is
+begin
+	case (Number) is
+	when 0	   => return "1000000";
+	when 1		=> return "1111001";
+	when 2		=> return "0100100";
+	when 3 		=> return "0110000";
+	when 4		=> return "0011001";
+	when 5 		=> return "0010010";
+	when 6		=> return "0000010";
+	when 7      => return "1111000";
+	when 8      => return "0000000";
+	when 9      => return "0010000";
+	when others => return "1111111";
+	end case;
+end SevenSegmentDisplay;
+
+
+begin 
+	-- Module Institiate
+	module_RingCounter: MTran_Lab8_VHDL_RingCounter
+	port map
+	(
+		-- Inputs
+		CLK    => BTN ,
+		Reset  => Reset,
+		
+		-- Output
+		Output => LED_Ring
+	);
+	
+	module_JohnsonCounter: MTran_Lab8_VHDL_JohnsonCounter
+	port map
+	(
+		-- Inputs
+		CLK    => BTN ,
+		Reset  => Reset,
+		
+		-- Output
+		Output => LED_Johnson
+	);
+	
+	-- Process
+	process(BTN, Reset) is
+	begin
+	
+	end process;
+	
+end Behavioral;

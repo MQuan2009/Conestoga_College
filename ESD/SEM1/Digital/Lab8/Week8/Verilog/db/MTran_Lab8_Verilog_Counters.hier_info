@@ -1,0 +1,59 @@
+|MTran_Lab8_Verilog_Counters
+BTN => BTN.IN2
+Reset => Reset.IN2
+Complement => Complement.IN2
+LED_Ring[0] << MTran_Lab8_Verilog_RingCounter:RingCounter.Q
+LED_Ring[1] << MTran_Lab8_Verilog_RingCounter:RingCounter.Q
+LED_Ring[2] << MTran_Lab8_Verilog_RingCounter:RingCounter.Q
+LED_Ring[3] << MTran_Lab8_Verilog_RingCounter:RingCounter.Q
+LED_John[0] << MTran_Lab8_Verilog_JohnsonCounter:JohnsonCounter.Q
+LED_John[1] << MTran_Lab8_Verilog_JohnsonCounter:JohnsonCounter.Q
+LED_John[2] << MTran_Lab8_Verilog_JohnsonCounter:JohnsonCounter.Q
+LED_John[3] << MTran_Lab8_Verilog_JohnsonCounter:JohnsonCounter.Q
+HEX0[0] << Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[1] << <GND>
+HEX0[2] << Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[3] << Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[4] << MTran_Lab8_Verilog_RingCounter:RingCounter.StateNumber
+HEX0[5] << Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[6] << MTran_Lab8_Verilog_RingCounter:RingCounter.StateNumber
+HEX4[0] << SevenSegmentDisplay.DB_MAX_OUTPUT_PORT_TYPE
+HEX4[1] << SevenSegmentDisplay.DB_MAX_OUTPUT_PORT_TYPE
+HEX4[2] << Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+HEX4[3] << WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+HEX4[4] << WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+HEX4[5] << WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+HEX4[6] << WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MTran_Lab8_Verilog_Counters|MTran_Lab8_Verilog_RingCounter:RingCounter
+CLK => state[0].CLK
+CLK => state[1].CLK
+Reset => state[0].ACLR
+Reset => state[1].ACLR
+Complement => complementMode.CLK
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+StateNumber[0] <= state[0].DB_MAX_OUTPUT_PORT_TYPE
+StateNumber[1] <= state[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MTran_Lab8_Verilog_Counters|MTran_Lab8_Verilog_JohnsonCounter:JohnsonCounter
+CLK => state[0].CLK
+CLK => state[1].CLK
+CLK => state[2].CLK
+Reset => state[0].ACLR
+Reset => state[1].ACLR
+Reset => state[2].ACLR
+Complement => complementMode.CLK
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+StateNumber[0] <= state[0].DB_MAX_OUTPUT_PORT_TYPE
+StateNumber[1] <= state[1].DB_MAX_OUTPUT_PORT_TYPE
+StateNumber[2] <= state[2].DB_MAX_OUTPUT_PORT_TYPE
+
+

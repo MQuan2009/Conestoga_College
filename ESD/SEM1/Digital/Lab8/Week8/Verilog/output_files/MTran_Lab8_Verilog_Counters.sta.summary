@@ -1,0 +1,69 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'Complement'
+Slack : -0.678
+TNS   : -1.353
+
+Type  : Slow 1100mV 85C Model Hold 'Complement'
+Slack : 0.404
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'Complement'
+Slack : -0.394
+TNS   : -1.189
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'BTN'
+Slack : -0.394
+TNS   : -0.683
+
+Type  : Slow 1100mV 0C Model Setup 'Complement'
+Slack : -0.623
+TNS   : -1.241
+
+Type  : Slow 1100mV 0C Model Hold 'Complement'
+Slack : 0.430
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'Complement'
+Slack : -0.394
+TNS   : -1.302
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'BTN'
+Slack : -0.394
+TNS   : -0.614
+
+Type  : Fast 1100mV 85C Model Setup 'Complement'
+Slack : -0.064
+TNS   : -0.125
+
+Type  : Fast 1100mV 85C Model Hold 'Complement'
+Slack : 0.250
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'Complement'
+Slack : -0.296
+TNS   : -0.589
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'BTN'
+Slack : -0.265
+TNS   : -0.265
+
+Type  : Fast 1100mV 0C Model Setup 'Complement'
+Slack : -0.007
+TNS   : -0.013
+
+Type  : Fast 1100mV 0C Model Hold 'Complement'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'Complement'
+Slack : -0.318
+TNS   : -0.634
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'BTN'
+Slack : -0.298
+TNS   : -0.298
+
+------------------------------------------------------------

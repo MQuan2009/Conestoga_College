@@ -1,0 +1,80 @@
+module MTran_Lab8_Verilog_Counters
+(
+	// Inputs
+	input  wire BTN,
+	input  wire Reset,
+	input  wire Complement,
+	
+	// Outputs
+	output reg  [3:0] LED_Ring,
+	output reg  [3:0] LED_John,
+	output reg  [6:0] HEX0,
+	output reg  [6:0] HEX4
+);
+
+// Signal Declaration
+wire  [1:0] RingCounterState;	 // range from 0 to 3
+wire  [2:0] JohnsonCounterState; // range from 0 to 7
+
+wire [3:0] OutputRing;
+wire [3:0] OutputJohnson;
+
+
+// Module instantiation
+MTran_Lab8_Verilog_RingCounter RingCounter
+(
+	// Inputs
+	.CLK(BTN),
+	.Reset(Reset),
+	.Complement(Complement),
+	
+	// Outputs
+	.Q(OutputRing),
+	.StateNumber(RingCounterState)
+);
+
+MTran_Lab8_Verilog_JohnsonCounter JohnsonCounter
+(
+	// Inputs
+	.CLK(BTN),
+	.Reset(Reset),
+	.Complement(Complement),
+	
+	// Outputs
+	.Q(OutputJohnson),
+	.StateNumber(JohnsonCounterState)
+);
+
+// Function for Seven Segment Display
+function [6:0] SevenSegmentDisplay;
+    input [3:0] Number;
+    begin
+        case (Number)
+            4'h0	 : SevenSegmentDisplay = 7'b1000000;
+            4'h1	 : SevenSegmentDisplay = 7'b1111001;
+            4'h2	 : SevenSegmentDisplay = 7'b0100100;
+            4'h3	 : SevenSegmentDisplay = 7'b0110000;
+            4'h4	 : SevenSegmentDisplay = 7'b0011001;
+            4'h5	 : SevenSegmentDisplay = 7'b0010010;
+            4'h6	 : SevenSegmentDisplay = 7'b0000010;
+            4'h7	 : SevenSegmentDisplay = 7'b1111000;
+            4'h8	 : SevenSegmentDisplay = 7'b0000000;
+            4'h9	 : SevenSegmentDisplay = 7'b0010000;
+            default: SevenSegmentDisplay = 7'b1111111;
+        endcase
+    end
+endfunction
+
+// Main code
+
+always @(RingCounterState, JohnsonCounterState)
+begin
+	
+	HEX0     = SevenSegmentDisplay(RingCounterState);
+	HEX4     = SevenSegmentDisplay(JohnsonCounterState);
+	LED_Ring = OutputRing;
+	LED_John = OutputJohnson;
+end
+
+endmodule
+
