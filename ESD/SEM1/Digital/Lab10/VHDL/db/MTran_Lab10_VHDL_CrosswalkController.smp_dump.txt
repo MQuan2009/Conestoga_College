@@ -1,0 +1,15 @@
+
+State Machine - |MTran_Lab10_VHDL_CrosswalkController|CurrentState
+Name CurrentState.REDWAIT3 CurrentState.REDWAIT2 CurrentState.REDWAIT1 CurrentState.RED CurrentState.YELLOWWAIT3 CurrentState.YELLOWWAIT2 CurrentState.YELLOWWAIT1 CurrentState.YELLOW CurrentState.GREENWAIT3 CurrentState.GREENWAIT2 CurrentState.GREENWAIT1 CurrentState.GREEN 
+CurrentState.GREEN 0 0 0 0 0 0 0 0 0 0 0 0 
+CurrentState.GREENWAIT1 0 0 0 0 0 0 0 0 0 0 1 1 
+CurrentState.GREENWAIT2 0 0 0 0 0 0 0 0 0 1 0 1 
+CurrentState.GREENWAIT3 0 0 0 0 0 0 0 0 1 0 0 1 
+CurrentState.YELLOW 0 0 0 0 0 0 0 1 0 0 0 1 
+CurrentState.YELLOWWAIT1 0 0 0 0 0 0 1 0 0 0 0 1 
+CurrentState.YELLOWWAIT2 0 0 0 0 0 1 0 0 0 0 0 1 
+CurrentState.YELLOWWAIT3 0 0 0 0 1 0 0 0 0 0 0 1 
+CurrentState.RED 0 0 0 1 0 0 0 0 0 0 0 1 
+CurrentState.REDWAIT1 0 0 1 0 0 0 0 0 0 0 0 1 
+CurrentState.REDWAIT2 0 1 0 0 0 0 0 0 0 0 0 1 
+CurrentState.REDWAIT3 1 0 0 0 0 0 0 0 0 0 0 1 

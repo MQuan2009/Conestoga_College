@@ -1,0 +1,66 @@
+library ieee;
+use ieee.std_logic_1164.ALL;
+
+entity MTran_Lab7_VHDL_Timer is
+generic (MaxTime : integer);
+port
+(
+	-- Inputs
+	Clk     : in    std_logic;
+	Enable  : in    std_logic;
+	
+	-- Outputs
+	Seconds : out   integer := MaxTime;
+	
+);
+end entity;
+
+architecture RTL of MTran_Lab7_VHDL_Timer is
+
+-- Signal Declaration
+signal Ticks : integer := 0;
+
+constant ClockFrequency   : integer := 50000000;
+
+-- Procedure
+procedure Increment( signal   Counter   : inout integer;
+							constant MaxValue  : in    integer;
+							variable ResetFlag : out   boolean) is
+begin
+	if Counter = MaxValue - 1 then
+		-- Reset Counter
+		Counter  <= 0;
+		ResetFlag := True;
+	else
+		Counter <= Counter + 1;
+		ResetFlag := False;
+	end if;
+end procedure;
+
+begin
+	
+	process(Clk, Enable) is
+	
+	-- Variable Declaring
+	variable TicksFlag      : boolean := false;
+
+
+		
+	-- Main
+	begin
+	
+	if Enable = '1' then
+		if rising_edge(Clk) then
+			
+			-- Increment Ticks
+			Increment(Ticks, ClockFrequency, TicksFlag);
+
+			-- Increment Seconds whenever Ticks reach Clock Frequency
+			if SecondsFlag then
+				Seconds = Seconds - 1;
+			end if;
+		end if;
+	end if;
+		
+	end process;
+end architecture;
