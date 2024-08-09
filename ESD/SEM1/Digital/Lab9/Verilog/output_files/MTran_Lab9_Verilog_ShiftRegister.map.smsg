@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at MTran_Lab9_Verilog_ShiftRegister.v(55): always construct contains both blocking and non-blocking assignments File: D:/Study/Github_ESD/ESD/SEM1/Digital/Lab9/Verilog/MTran_Lab9_Verilog_ShiftRegister.v Line: 55
