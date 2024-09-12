@@ -1,0 +1,7 @@
+../Core/Src/main.c:88:6:addPlayers	136	static
+../Core/Src/main.c:152:6:drawWinner	104	static
+../Core/Src/main.c:177:5:main	664	static
+../Core/Src/main.c:261:6:SystemClock_Config	96	static
+../Core/Src/main.c:322:13:MX_USART2_UART_Init	8	static
+../Core/Src/main.c:357:13:MX_GPIO_Init	40	static
+../Core/Src/main.c:390:6:Error_Handler	4	static,ignoring_inline_asm

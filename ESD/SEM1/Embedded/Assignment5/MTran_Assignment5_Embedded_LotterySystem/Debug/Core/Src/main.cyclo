@@ -1,0 +1,7 @@
+../Core/Src/main.c:88:6:addPlayers	6
+../Core/Src/main.c:152:6:drawWinner	3
+../Core/Src/main.c:177:5:main	7
+../Core/Src/main.c:261:6:SystemClock_Config	4
+../Core/Src/main.c:322:13:MX_USART2_UART_Init	2
+../Core/Src/main.c:357:13:MX_GPIO_Init	1
+../Core/Src/main.c:390:6:Error_Handler	1
