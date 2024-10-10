@@ -1,0 +1,12 @@
+../Core/Src/main.c:94:7:adcConvertVoltage	1
+../Core/Src/main.c:111:7:getTemp	1
+../Core/Src/main.c:128:6:HAL_ADC_ConvCpltCallback	1
+../Core/Src/main.c:149:5:main	1
+../Core/Src/main.c:203:6:SystemClock_Config	3
+../Core/Src/main.c:250:13:MX_ADC1_Init	6
+../Core/Src/main.c:330:13:MX_USART2_UART_Init	2
+../Core/Src/main.c:361:13:MX_DMA_Init	1
+../Core/Src/main.c:379:13:MX_GPIO_Init	1
+../Core/Src/main.c:412:1:__io_putchar	1
+../Core/Src/main.c:418:1:__io_getchar	1
+../Core/Src/main.c:431:6:Error_Handler	1

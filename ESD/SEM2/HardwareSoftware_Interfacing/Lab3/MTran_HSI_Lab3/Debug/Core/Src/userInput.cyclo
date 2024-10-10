@@ -1,0 +1,2 @@
+../Core/Src/userInput.c:28:6:ClearUART2RxBuffer	1
+../Core/Src/userInput.c:44:6:GetCharFromUART2	3
