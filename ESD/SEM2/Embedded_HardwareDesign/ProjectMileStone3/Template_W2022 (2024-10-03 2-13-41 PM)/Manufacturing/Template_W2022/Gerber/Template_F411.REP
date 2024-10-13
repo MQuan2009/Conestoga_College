@@ -2,49 +2,10 @@
 FileName = Template_F411.GBR
 AutoAperture = True
 *************************************************************
-Generating : Top Layer
-      File : Template_F411.GTL
+Generating : Bottom Solder
+      File : Template_F411.GBS
 
-    Adding Layer      : Top Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D14
-    D43
-    D44
-    D45
-    D46
-    D47
-    D48
-    D49
-    D50
-    D51
-    D52
-    D53
-    D54
-    D55
-    D56
-    D57
-    D58
-    D59
-    D60
-    D61
-    D62
-    D63
-    D64
-    D65
-    D66
-    D67
-    D68
-    D69
-    D70
-*************************************************************
-
-*************************************************************
-Generating : Bottom Layer
-      File : Template_F411.GBL
+    Adding Layer      : Bottom Solder
 
     Adding Layer      : Bottom Layer
 
@@ -52,58 +13,17 @@ Generating : Bottom Layer
 
 
 Used DCodes :
-    D14
-    D59
-    D60
-    D61
-    D62
-    D63
-    D64
-    D65
-    D66
-    D67
-    D68
-    D69
-    D70
-*************************************************************
-
-*************************************************************
-Generating : Top Overlay
-      File : Template_F411.GTO
-
-    Adding Layer      : Top Overlay
-
-
-Used DCodes :
-    D10
-    D11
-    D12
-    D13
-    D14
-    D15
-*************************************************************
-
-*************************************************************
-Generating : Bottom Overlay
-      File : Template_F411.GBO
-
-    Adding Layer      : Bottom Overlay
-
-
-Used DCodes :
-*************************************************************
-
-*************************************************************
-Generating : Outline
-      File : Template_F411.GM13
-
-    Adding Layer      : Outline
-
-
-Used DCodes :
-    D71
-    D72
-    D73
+    D32
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+    D42
 *************************************************************
 
 *************************************************************
@@ -148,10 +68,21 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
-Generating : Bottom Solder
-      File : Template_F411.GBS
+Generating : Outline
+      File : Template_F411.GM13
 
-    Adding Layer      : Bottom Solder
+    Adding Layer      : Outline
+
+
+Used DCodes :
+    D73
+    D74
+    D75
+*************************************************************
+
+*************************************************************
+Generating : Bottom Layer
+      File : Template_F411.GBL
 
     Adding Layer      : Bottom Layer
 
@@ -159,17 +90,88 @@ Generating : Bottom Solder
 
 
 Used DCodes :
-    D32
-    D33
-    D34
-    D35
-    D36
-    D37
-    D38
-    D39
-    D40
-    D41
-    D42
+    D14
+    D59
+    D60
+    D61
+    D62
+    D63
+    D64
+    D65
+    D66
+    D67
+    D68
+    D69
+    D70
+    D71
+    D72
+*************************************************************
+
+*************************************************************
+Generating : Top Layer
+      File : Template_F411.GTL
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D14
+    D43
+    D44
+    D45
+    D46
+    D47
+    D48
+    D49
+    D50
+    D51
+    D52
+    D53
+    D54
+    D55
+    D56
+    D57
+    D58
+    D59
+    D60
+    D61
+    D62
+    D63
+    D64
+    D65
+    D66
+    D67
+    D68
+    D69
+    D70
+*************************************************************
+
+*************************************************************
+Generating : Bottom Overlay
+      File : Template_F411.GBO
+
+    Adding Layer      : Bottom Overlay
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : Top Overlay
+      File : Template_F411.GTO
+
+    Adding Layer      : Top Overlay
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
 *************************************************************
 
 *************************************************************
@@ -182,7 +184,9 @@ Generating : Drill Drawing
 
 
 Used DCodes :
-    D74
-    D75
+    D14
+    D72
+    D76
+    D77
 *************************************************************
 
