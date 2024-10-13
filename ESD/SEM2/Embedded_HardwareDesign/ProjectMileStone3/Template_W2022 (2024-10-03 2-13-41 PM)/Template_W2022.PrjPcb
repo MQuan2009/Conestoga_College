@@ -44,9 +44,6 @@ CrossRefPorts=3
 CrossRefCrossSheets=1
 CrossRefSheetEntries=0
 CrossRefFollowFromMainSettings=1
-VaultGUID=
-ReleaseVaultName=
-ItemGUID=
 
 [Preferences]
 PrefsVaultGUID=
@@ -204,6 +201,10 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=DBCWMDUR
+
+[GeneratedDocument1]
+DocumentPath=Project Outputs for Template_W2022\Design Rule Check - Template_F411.html
+DItemRevisionGUID=
 
 [Configuration1]
 Name=Default Configuration
