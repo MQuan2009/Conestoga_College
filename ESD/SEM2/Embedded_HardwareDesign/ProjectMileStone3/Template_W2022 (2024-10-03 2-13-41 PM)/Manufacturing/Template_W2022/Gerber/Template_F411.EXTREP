@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------------------------
-Gerber File Extension Report For: Template_F411.GBR   2024-10-12  10:47:35 PM
+Gerber File Extension Report For: Template_F411.GBR   2024-10-12  11:16:08 PM
 ------------------------------------------------------------------------------------------
 
 
@@ -12,6 +12,5 @@ Layer Extension     Layer Description
 .GBL                Bottom Layer                            
 .GBS                Bottom Solder                           
 .GBO                Bottom Overlay                          
-.GM13               Outline                                 
 .GD1                Drill Drawing                           
 ------------------------------------------------------------------------------------------

@@ -2,28 +2,29 @@
 FileName = Template_F411.GBR
 AutoAperture = True
 *************************************************************
-Generating : Bottom Solder
-      File : Template_F411.GBS
+Generating : Bottom Overlay
+      File : Template_F411.GBO
 
-    Adding Layer      : Bottom Solder
-
-    Adding Layer      : Bottom Layer
-
-    Adding Layer      : Multi-Layer
+    Adding Layer      : Bottom Overlay
 
 
 Used DCodes :
-    D32
-    D33
-    D34
-    D35
-    D36
-    D37
-    D38
-    D39
-    D40
-    D41
-    D42
+*************************************************************
+
+*************************************************************
+Generating : Top Overlay
+      File : Template_F411.GTO
+
+    Adding Layer      : Top Overlay
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
 *************************************************************
 
 *************************************************************
@@ -68,46 +69,6 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
-Generating : Outline
-      File : Template_F411.GM13
-
-    Adding Layer      : Outline
-
-
-Used DCodes :
-    D73
-    D74
-    D75
-*************************************************************
-
-*************************************************************
-Generating : Bottom Layer
-      File : Template_F411.GBL
-
-    Adding Layer      : Bottom Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D14
-    D59
-    D60
-    D61
-    D62
-    D63
-    D64
-    D65
-    D66
-    D67
-    D68
-    D69
-    D70
-    D71
-    D72
-*************************************************************
-
-*************************************************************
 Generating : Top Layer
       File : Template_F411.GTL
 
@@ -149,29 +110,55 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
-Generating : Bottom Overlay
-      File : Template_F411.GBO
+Generating : Bottom Layer
+      File : Template_F411.GBL
 
-    Adding Layer      : Bottom Overlay
+    Adding Layer      : Bottom Layer
 
-
-Used DCodes :
-*************************************************************
-
-*************************************************************
-Generating : Top Overlay
-      File : Template_F411.GTO
-
-    Adding Layer      : Top Overlay
+    Adding Layer      : Multi-Layer
 
 
 Used DCodes :
-    D10
-    D11
-    D12
-    D13
     D14
-    D15
+    D59
+    D60
+    D61
+    D62
+    D63
+    D64
+    D65
+    D66
+    D67
+    D68
+    D69
+    D70
+    D71
+    D72
+*************************************************************
+
+*************************************************************
+Generating : Bottom Solder
+      File : Template_F411.GBS
+
+    Adding Layer      : Bottom Solder
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D32
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+    D42
 *************************************************************
 
 *************************************************************
@@ -186,7 +173,7 @@ Generating : Drill Drawing
 Used DCodes :
     D14
     D72
-    D76
-    D77
+    D73
+    D74
 *************************************************************
 
