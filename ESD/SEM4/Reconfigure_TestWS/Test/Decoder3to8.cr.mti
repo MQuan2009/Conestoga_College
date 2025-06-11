@@ -1,0 +1,35 @@
+D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/MUX_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/MUX_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Mux_tb
+-- Compiling architecture test of Mux_tb
+
+} {} {}} D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/Decoder3to8.vhdl {1 {vcom -work work -2002 -explicit -stats=none D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/Decoder3to8.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity MTran_Lab5_VHDL_OctalDecoder
+-- Compiling architecture behavioral of MTran_Lab5_VHDL_OctalDecoder
+
+} {} {}} D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/Decoder3to8_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/Decoder3to8_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity OctalDecoder_tb
+-- Compiling architecture test of OctalDecoder_tb
+
+} {} {}} D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/MUX.vhdl {1 {vcom -work work -2002 -explicit -stats=none D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/MUX.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Mux8to1
+-- Compiling architecture Behavioral of Mux8to1
+
+} {} {}}

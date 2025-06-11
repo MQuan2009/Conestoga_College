@@ -1,0 +1,300 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/Software/intelFPGA/20.1
+Eand_gate
+Z0 w1747175418
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 2
+Z3 dD:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test
+Z4 8test.vhd
+Z5 Ftest.vhd
+l0
+L4 1
+V;mlE]Z=FGc74DLFV^LhRH3
+!s100 Agb7>C@YXfWZK2Y?ljE>A2
+Z6 OV;C;2020.1;71
+32
+Z7 !s110 1747175594
+!i10b 1
+Z8 !s108 1747175594.000000
+Z9 !s90 -reportprogress|300|test.vhd|
+Z10 !s107 test.vhd|
+!i113 1
+Z11 tExplicit 1 CvgOpt 0
+Abehavioral
+R1
+R2
+DEx4 work 8 and_gate 0 22 ;mlE]Z=FGc74DLFV^LhRH3
+!i122 2
+l13
+L12 4
+Vzc5JeKilQe[NOD[6gj9nM0
+!s100 _6@2@=JZe`:TfaSICUI5b0
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+Emtran_lab5_vhdl_octaldecoder
+Z12 w1747755326
+R1
+R2
+!i122 20
+R3
+Z13 8D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/Decoder3to8.vhdl
+Z14 FD:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/Decoder3to8.vhdl
+l0
+L5 1
+V`dbNDHbK;?Mc6IkTF;P6R0
+!s100 [5N0fN1X<V[5^TYjBz_L42
+R6
+32
+Z15 !s110 1747757871
+!i10b 1
+Z16 !s108 1747757871.000000
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/Decoder3to8.vhdl|
+Z18 !s107 D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/Decoder3to8.vhdl|
+!i113 1
+Z19 o-work work -2002 -explicit
+R11
+Abehavioral
+R1
+R2
+DEx4 work 28 mtran_lab5_vhdl_octaldecoder 0 22 `dbNDHbK;?Mc6IkTF;P6R0
+!i122 20
+l37
+L15 32
+V^U?0cIkz4V@OU4GD=DT^b2
+!s100 _Xi^WIVl=@^2IfSl4NP>72
+R6
+32
+R15
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R19
+R11
+Emux8to1
+Z20 w1747757493
+R1
+R2
+!i122 22
+R3
+Z21 8D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/MUX.vhdl
+Z22 FD:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/MUX.vhdl
+l0
+L4 1
+VK0R=[9OTh4`>L[hUJebAL3
+!s100 FzLBbJE1M]?4<j=W:XMIo1
+R6
+32
+R15
+!i10b 1
+R16
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/MUX.vhdl|
+Z24 !s107 D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/MUX.vhdl|
+!i113 1
+R19
+R11
+Abehavioral
+R1
+R2
+DEx4 work 7 mux8to1 0 22 K0R=[9OTh4`>L[hUJebAL3
+!i122 22
+l14
+L13 17
+VTH]1GAjARE^5M?H5:MUEU2
+!s100 En^[FJ7jUQ@j=7Zo[k1Zf2
+R6
+32
+R15
+!i10b 1
+R16
+R23
+R24
+!i113 1
+R19
+R11
+Emux_tb
+Z25 w1747757868
+Z26 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R1
+R2
+!i122 23
+R3
+Z27 8D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/MUX_tb.vhd
+Z28 FD:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/MUX_tb.vhd
+l0
+L5 1
+V[8JB;[GK69C0X6n:VnFh11
+!s100 ?[=k`]Z4=2Llgz?be?77_1
+R6
+32
+R15
+!i10b 1
+R16
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/MUX_tb.vhd|
+!s107 D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/MUX_tb.vhd|
+!i113 1
+R19
+R11
+Atest
+R26
+R1
+R2
+DEx4 work 6 mux_tb 0 22 [8JB;[GK69C0X6n:VnFh11
+!i122 23
+l25
+L8 44
+Va@;40KL2`cTo[S3P`_UQM3
+!s100 mEGn:BObzKK?9VelmzDAX2
+R6
+32
+R15
+!i10b 1
+R16
+R29
+Z30 !s107 D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/MUX_tb.vhd|
+!i113 1
+R19
+R11
+Eoctaldecoder_tb
+Z31 w1747757397
+R26
+R1
+R2
+!i122 21
+R3
+Z32 8D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/Decoder3to8_tb.vhd
+Z33 FD:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/Decoder3to8_tb.vhd
+l0
+L5 1
+VUE<@LF1bR:PQY<oEhcN5;2
+!s100 1o@094V5[LOl5zIFWRm9g2
+R6
+32
+R15
+!i10b 1
+R16
+Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/Decoder3to8_tb.vhd|
+Z35 !s107 D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/Decoder3to8_tb.vhd|
+!i113 1
+R19
+R11
+Atest
+R26
+R1
+R2
+DEx4 work 15 octaldecoder_tb 0 22 UE<@LF1bR:PQY<oEhcN5;2
+!i122 21
+l25
+L8 54
+V2OgYhFa9g<]De^@bZjTnW0
+!s100 fRb<TGRVg=aXSfBi@Kk0@0
+R6
+32
+R15
+!i10b 1
+R16
+R34
+R35
+!i113 1
+R19
+R11
+Etb_and_gate
+Z36 w1747175546
+R1
+R2
+!i122 3
+R3
+Z37 8TestBench_AndGate.vhd
+Z38 FTestBench_AndGate.vhd
+l0
+L4 1
+VTSeJ^P54h2<QR@Ak^oheB1
+!s100 zGR9IVC_:Xi]0GPm10J_22
+R6
+32
+Z39 !s110 1747175605
+!i10b 1
+Z40 !s108 1747175605.000000
+Z41 !s90 -reportprogress|300|TestBench_AndGate.vhd|
+Z42 !s107 TestBench_AndGate.vhd|
+!i113 1
+R11
+Abehavior
+R1
+R2
+DEx4 work 11 tb_and_gate 0 22 TSeJ^P54h2<QR@Ak^oheB1
+!i122 3
+l23
+L7 49
+VPdiljGdVZ4fhK]f31[kC^0
+!s100 UR>ZFlB<HzOFMD1QP]QR73
+R6
+32
+R39
+!i10b 1
+R40
+R41
+R42
+!i113 1
+R11
+Etb_octaldecoder
+Z43 w1747755827
+R26
+R1
+R2
+!i122 13
+R3
+R32
+R33
+l0
+L5 1
+VIelEGfTUTFKVfcB<Ja0_Z0
+!s100 DePgLgXNeNHE3I33kMC@F1
+R6
+32
+Z44 !s110 1747755832
+!i10b 1
+Z45 !s108 1747755832.000000
+R34
+R35
+!i113 1
+R19
+R11
+Atest
+R26
+R1
+R2
+DEx4 work 15 tb_octaldecoder 0 22 IelEGfTUTFKVfcB<Ja0_Z0
+!i122 13
+l24
+L8 52
+V[4HLE@?CzT6HW_SQPYEVN2
+!s100 M<MQo_J@6Ln06dSO:Q:W92
+R6
+32
+R44
+!i10b 1
+R45
+R34
+R35
+!i113 1
+R19
+R11

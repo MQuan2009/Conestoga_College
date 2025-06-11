@@ -1,0 +1,20 @@
+module ADD (
+    input  logic        EN,
+    input  logic        CARRYIN,
+    input  logic [7:0]  A,
+    input  logic [7:0]  B,
+    output logic [7:0]  RESULT,
+    output logic        CARRYOUT
+);
+    logic [8:0] temp;
+    always_comb begin
+        if (EN)
+            temp = {1'b0, A} + {1'b0, B} + CARRYIN;
+        else
+            temp = 9'b0;
+
+        RESULT   = temp[7:0];
+        CARRYOUT = temp[8];
+    end
+endmodule
+

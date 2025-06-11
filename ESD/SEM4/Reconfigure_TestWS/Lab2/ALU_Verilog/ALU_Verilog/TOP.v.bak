@@ -1,0 +1,95 @@
+module TOP(
+    input wire CLK,
+    input wire [3:0] OP,
+    input wire EN,
+    input wire [2:0] SEL,
+    input wire [2:0] SEL_A,
+    input wire [2:0] SEL_B,
+    input wire [7:0] DATA_IN,
+    input wire CARRYIN,
+    output reg [8:0] RESULT,
+    output reg C,
+    output reg V,
+    output reg S,
+    output reg Z,
+    output wire [63:0] REGISTER_FILE
+);
+    reg [7:0] registers [0:7];
+
+    wire [7:0] Abus, Bbus;
+    wire [7:0] out_tsa, out_inc, out_dec, out_add;
+    wire [7:0] out_sub, out_and, out_or, out_xor, out_not, out_shl, out_shr;
+    wire carry_inc, borrow_dec, carry_add, borrow_sub;
+    wire carry_shl, carry_shr;
+
+    assign REGISTER_FILE = {registers[7], registers[6], registers[5], registers[4],
+                            registers[3], registers[2], registers[1], registers[0]};
+
+    REG_MUX mux (
+        .REGS(REGISTER_FILE),
+        .SEL_A(SEL_A),
+        .SEL_B(SEL_B),
+        .Abus(Abus),
+        .Bbus(Bbus)
+    );
+
+    TSA tsa (.DATA(DATA_IN), .EN(OP == 4'b0000 && EN), .OUTPUT(out_tsa));
+    INC inc (.A(Abus), .EN(OP == 4'b0001 && EN), .RESULT(out_inc), .CARRY(carry_inc));
+    DEC dec (.A(Abus), .EN(OP == 4'b0010 && EN), .RESULT(out_dec), .BORROW(borrow_dec));
+    ADD add (.A(Abus), .B(Bbus), .CARRYIN(CARRYIN), .EN(OP == 4'b0011 && EN), .RESULT(out_add), .CARRYOUT(carry_add));
+    SUB sub (.A(Abus), .B(Bbus), .CARRYIN(CARRYIN), .EN(OP == 4'b0100 && EN), .RESULT(out_sub), .BORROW(borrow_sub));
+    AND_BLOCK andg (.A(Abus), .B(Bbus), .EN(OP == 4'b0101 && EN), .RESULT(out_and));
+    OR_BLOCK org (.A(Abus), .B(Bbus), .EN(OP == 4'b0110 && EN), .RESULT(out_or));
+    XOR_BLOCK xorg (.A(Abus), .B(Bbus), .EN(OP == 4'b0111 && EN), .RESULT(out_xor));
+    NOT_BLOCK notg (.A(Abus), .B(Bbus), .EN(OP == 4'b1000 && EN), .RESULT(out_not));
+    SHL shl (.A(Abus), .EN(OP == 4'b1001 && EN), .RESULT(out_shl), .CARRY(carry_shl));
+    SHR shr (.A(Abus), .EN(OP == 4'b1010 && EN), .RESULT(out_shr), .CARRY(carry_shr));
+
+    always @(posedge CLK) begin
+        if (EN) begin
+            case (OP)
+                4'b0000: registers[SEL] <= out_tsa;
+                4'b0001: registers[SEL] <= out_inc;
+                4'b0010: registers[SEL] <= out_dec;
+                4'b0011: registers[SEL] <= out_add;
+                4'b0100: registers[SEL] <= out_sub;
+                4'b0101: registers[SEL] <= out_and;
+                4'b0110: registers[SEL] <= out_or;
+                4'b0111: registers[SEL] <= out_xor;
+                4'b1000: registers[SEL] <= out_not;
+                4'b1001: registers[SEL] <= out_shl;
+                4'b1010: registers[SEL] <= out_shr;
+                default: registers[SEL] <= 8'b0;
+            endcase
+        end
+
+        case (OP)
+            4'b0000: RESULT <= {1'b0, out_tsa};
+            4'b0001: RESULT <= {carry_inc, out_inc};
+            4'b0010: RESULT <= {borrow_dec, out_dec};
+            4'b0011: RESULT <= {carry_add, out_add};
+            4'b0100: RESULT <= {borrow_sub, out_sub};
+            4'b0101: RESULT <= {1'b0, out_and};
+            4'b0110: RESULT <= {1'b0, out_or};
+            4'b0111: RESULT <= {1'b0, out_xor};
+            4'b1000: RESULT <= {1'b0, out_not};
+            4'b1001: RESULT <= {1'b0, out_shl};
+            4'b1010: RESULT <= {1'b0, out_shr};
+            default: RESULT <= 9'b0;
+        endcase
+
+        case (OP)
+            4'b0001: begin C <= carry_inc;  V <= carry_inc; end
+            4'b0010: begin C <= borrow_dec; V <= borrow_dec; end
+            4'b0011: begin C <= carry_add;  V <= carry_add; end
+            4'b0100: begin C <= borrow_sub; V <= borrow_sub; end
+            4'b1001: begin C <= carry_shl; V <= carry_shl; end
+            4'b1010: begin C <= carry_shr; V <= carry_shr; end
+            default: begin C <= 1'b0; V <= 1'b0; end
+        endcase
+
+        S <= RESULT[7];
+        Z <= (RESULT[7:0] == 8'b0);
+    end
+endmodule
+

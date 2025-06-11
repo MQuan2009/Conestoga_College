@@ -1,0 +1,34 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity ADD is
+    Port (
+        CLK      : in  STD_LOGIC;                       -- Clock
+        EN       : in  STD_LOGIC;                       -- Enable
+        CARRYIN  : in  STD_LOGIC;                       -- Carry from last increment stored
+        A        : in  STD_LOGIC_VECTOR(7 downto 0);    -- Register A
+	B        : in  STD_LOGIC_VECTOR(7 downto 0);    -- Register B
+        RESULT   : out STD_LOGIC_VECTOR(7 downto 0);    -- Output register value (selected)
+        CARRYOUT : out STD_LOGIC                        -- Carry from last increment stored
+    );
+end ADD;
+
+architecture Behavioral of ADD is  
+begin
+    process(A, B, EN, CARRYIN)
+	variable temp  : STD_LOGIC_VECTOR(8 downto 0);
+    begin
+        if EN = '1' then
+            -- Increment input A
+	    if CARRYIN = '1' then
+		temp := std_logic_vector(unsigned('0' & A) + unsigned('0' & B) + 1);
+	    else
+		temp := std_logic_vector(unsigned('0' & A) + unsigned('0' & B));
+	    end if;
+            -- Store incremented value and carry in selected register
+    	    RESULT   <= temp(7 downto 0);
+   	    CARRYOUT <= temp(8);
+        end if;
+    end process;
+end Behavioral;

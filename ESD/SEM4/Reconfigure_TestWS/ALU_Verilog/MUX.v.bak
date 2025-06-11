@@ -1,0 +1,13 @@
+module REG_MUX (
+    input  wire [63:0] REGS,   // 8 registers × 8 bits
+    input  wire [2:0]  SEL_A,
+    input  wire [2:0]  SEL_B,
+    output wire [7:0]  Abus,
+    output wire [7:0]  Bbus
+);
+    always_comb begin
+        Abus = REGS[SEL_A * 8 +: 8];
+        Bbus = REGS[SEL_B * 8 +: 8];
+    end
+endmodule
+

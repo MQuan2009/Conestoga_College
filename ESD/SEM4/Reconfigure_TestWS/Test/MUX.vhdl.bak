@@ -1,0 +1,28 @@
+library ieee;
+use ieee.std_logic_1164.all;  
+
+entity Mux8to1 is
+    Port (
+        D   : in  std_logic_vector(7 downto 0);
+        Sel : in  std_logic_vector(2 downto 0);
+        O   : out std_logic
+    );
+end Mux8to1;
+
+architecture Behavioral of Mux8to1 is
+begin
+    process(D, Sel)
+    begin
+        case Sel is
+            when "000" => O <= D(0);
+            when "001" => O <= D(1);
+            when "010" => O <= D(2);
+            when "011" => O <= D(3);
+            when "100" => O <= D(4);
+            when "101" => O <= D(5);
+            when "110" => O <= D(6);
+            when "111" => O <= D(7);
+            when others => O <= 'X';
+        end case;
+    end process;
+end Behavioral;

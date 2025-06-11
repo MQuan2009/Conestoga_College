@@ -1,0 +1,16 @@
+module SHL (
+    input wire EN,
+    input wire [7:0] A,
+    output wire [7:0] RESULT,
+    output wire CARRY
+
+);
+    if (EN) begin
+        assign CARRY = A[7];
+        assign RESULT = {A[6:0], 1'b0};
+    else
+	assign CARRY = 0;
+	assign RESULT = 8'b00000000;
+    end
+endmodule
+

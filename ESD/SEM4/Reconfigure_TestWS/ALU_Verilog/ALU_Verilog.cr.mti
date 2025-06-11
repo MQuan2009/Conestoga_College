@@ -1,0 +1,99 @@
+D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/ALU_Verilog/SHL.v {1 {vlog -work work -stats=none D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/ALU_Verilog/SHL.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module SHL
+
+Top level modules:
+	SHL
+
+} {} {}} D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/ALU_Verilog/TOP_tb.v {1 {vlog -work work -stats=none D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/ALU_Verilog/TOP_tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module TOP_tb
+
+Top level modules:
+	TOP_tb
+
+} {} {}} D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/ALU_Verilog/ADD.v {1 {vlog -work work -stats=none D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/ALU_Verilog/ADD.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ADD
+
+Top level modules:
+	ADD
+
+} {} {}} D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/ALU_Verilog/INC.v {1 {vlog -work work -stats=none D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/ALU_Verilog/INC.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module INC
+
+Top level modules:
+	INC
+
+} {} {}} D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/ALU_Verilog/TOP.v {1 {vlog -work work -stats=none D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/ALU_Verilog/TOP.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module TOP
+
+Top level modules:
+	TOP
+
+} {} {}} D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/ALU_Verilog/XOR_BLOCK.v {1 {vlog -work work -stats=none D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/ALU_Verilog/XOR_BLOCK.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module XOR_BLOCK
+
+Top level modules:
+	XOR_BLOCK
+
+} {} {}} D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/ALU_Verilog/SHR.v {1 {vlog -work work -stats=none D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/ALU_Verilog/SHR.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module SHR
+
+Top level modules:
+	SHR
+
+} {} {}} D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/ALU_Verilog/AND_BLOCK.v {1 {vlog -work work -stats=none D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/ALU_Verilog/AND_BLOCK.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module AND_BLOCK
+
+Top level modules:
+	AND_BLOCK
+
+} {} {}} D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/ALU_Verilog/TSA.v {1 {vlog -work work -stats=none D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/ALU_Verilog/TSA.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module TSA
+
+Top level modules:
+	TSA
+
+} {} {}} D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/ALU_Verilog/SUB.v {1 {vlog -work work -stats=none D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/ALU_Verilog/SUB.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module SUB
+
+Top level modules:
+	SUB
+
+} {} {}} D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/ALU_Verilog/MUX.v {1 {vlog -work work -stats=none D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/ALU_Verilog/MUX.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module REG_MUX
+
+Top level modules:
+	REG_MUX
+
+} {} {}} D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/ALU_Verilog/NOT_BLOCK.v {1 {vlog -work work -stats=none D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/ALU_Verilog/NOT_BLOCK.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module NOT_BLOCK
+
+Top level modules:
+	NOT_BLOCK
+
+} {} {}} D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/ALU_Verilog/DEC.v {1 {vlog -work work -stats=none D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/ALU_Verilog/DEC.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module DEC
+
+Top level modules:
+	DEC
+
+} {} {}} D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/OR_BLOCK.v {1 {vlog -work work -stats=none D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/OR_BLOCK.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module OR_BLOCK
+
+Top level modules:
+	OR_BLOCK
+
+} {} {}}

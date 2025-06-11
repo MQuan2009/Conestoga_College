@@ -1,0 +1,159 @@
+`timescale 1ns / 1ps
+
+module TOP_tb;
+
+    reg CLK = 0;
+    reg [3:0] OP;
+    reg EN;
+    reg [2:0] SEL, SEL_A, SEL_B;
+    reg [7:0] DATA_IN;
+    reg CARRYIN;
+    wire [8:0] RESULT;
+    wire C, V, S, Z;
+    wire [63:0] REGISTER_FILE;
+
+    // Visual unpacked register array
+    wire [7:0] reg_array [0:7];
+    genvar i;
+    generate
+        for (i = 0; i < 8; i = i + 1) begin
+            assign reg_array[i] = REGISTER_FILE[i*8 +: 8];
+        end
+    endgenerate
+
+    // Instantiate DUT
+    TOP dut (
+        .CLK(CLK),
+        .OP(OP),
+        .EN(EN),
+        .SEL(SEL),
+        .SEL_A(SEL_A),
+        .SEL_B(SEL_B),
+        .DATA_IN(DATA_IN),
+        .CARRYIN(CARRYIN),
+        .RESULT(RESULT),
+        .C(C),
+        .V(V),
+        .S(S),
+        .Z(Z),
+        .REGISTER_FILE(REGISTER_FILE)
+    );
+
+    // Clock generation: 10 ns period
+    always #5 CLK = ~CLK;
+
+    initial begin
+        EN = 0;
+        OP = 4'b0000;
+        SEL = 3'b000;
+        SEL_A = 3'b000;
+        SEL_B = 3'b000;
+        DATA_IN = 8'b0;
+        CARRYIN = 0;
+
+        #10;
+
+        // TSA - Load 10 to reg2
+        EN = 1;
+        OP = 4'b0000;
+        DATA_IN = 8'd200;
+        SEL = 3'd2;
+        #10;
+
+        // TSA - Load 5 to reg6
+        DATA_IN = 8'd100;
+        SEL = 3'd6;
+        #10;
+
+        // INC reg2 twice
+        OP = 4'b0001;
+        SEL = 3'd2;
+        SEL_A = 3'd2;
+        #10; #10;
+
+        // DEC reg2 twice
+        OP = 4'b0010;
+        #10; #10;
+
+        // ADD reg2 + reg6 => reg0
+        OP = 4'b0011;
+        SEL = 3'd0;
+        SEL_A = 3'd2;
+        SEL_B = 3'd6;
+        CARRYIN = 0;
+        #10;
+
+        // SUB reg2 - reg6 => reg1
+        OP = 4'b0100;
+        SEL = 3'd1;
+        #10;
+
+        // AND reg2 & reg6 => reg3
+        OP = 4'b0101;
+        SEL = 3'd3;
+        #10;
+
+        // OR reg2 | reg6 => reg4
+        OP = 4'b0110;
+        SEL = 3'd4;
+        #10;
+
+        // XOR reg2 ^ reg6 => reg5
+        OP = 4'b0111;
+        SEL = 3'd5;
+        #10;
+
+        EN = 0;
+
+        $display("Final register values:");
+        $display("reg0 (ADD): %d", reg_array[0]);
+        $display("reg1 (SUB): %d", reg_array[1]);
+        $display("reg2 (final): %d", reg_array[2]);
+        $display("reg3 (AND): %d", reg_array[3]);
+        $display("reg4 (OR): %d", reg_array[4]);
+        $display("reg5 (XOR): %d", reg_array[5]);
+        $display("reg6 (initial): %d", reg_array[6]);
+        $display("reg7: %d", reg_array[7]);
+
+        #20;
+// ???????????????????????????????????????????????????????
+// Phase 2: Test the new NOT, SHL (twice), SHR (twice) on reg2
+// ???????????????????????????????????????????????????????
+        
+        // Re?enable
+        EN     = 1;
+        SEL_A  = 3'd2;
+        SEL    = 3'd7;
+        
+        // 1) NOT (OP = 1000)
+        OP     = 4'b1000;
+        #10; 
+        $display("After NOT on reg2:  reg7 = 0x%0h (%0d)", reg_array[2], reg_array[7]);
+        
+        // 2) SHL twice (OP = 1001)
+        SEL    = 3'd2;
+        OP     = 4'b1001;
+        #10;  // 1st shift
+        #10;  // 2nd shift (applies to already-shifted value)
+        $display("After two SHL on reg2: reg2 = 0x%0h (%0d)", reg_array[2], reg_array[2]);
+        
+        // 3) SHR twice (OP = 1010)
+        OP     = 4'b1010;
+        #10;  // 1st shift
+        #10;  // 2nd shift
+        $display("After two SHR on reg2: reg2 = 0x%0h (%0d)", reg_array[2], reg_array[2]);
+        
+        // Turn off
+        EN     = 0;
+        
+        // Optional final dump
+        $display("Final reg2 = 0x%0h (%0d)", reg_array[2], reg_array[2]);
+        
+        #20;
+        $stop;
+
+        $stop;
+    end
+
+endmodule
+

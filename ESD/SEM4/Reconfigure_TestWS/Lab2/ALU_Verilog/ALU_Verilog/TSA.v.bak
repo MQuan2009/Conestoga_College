@@ -1,0 +1,13 @@
+module TSA (
+    input  logic        EN,
+    input  logic [7:0]  DATA,
+    output logic [7:0]  OUTPUT
+);
+    always_comb begin
+        if (EN)
+            OUTPUT = DATA;
+        else
+            OUTPUT = 8'b0;
+    end
+endmodule
+

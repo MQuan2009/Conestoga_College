@@ -1,0 +1,18 @@
+module INC (
+    input  logic        EN,
+    input  logic [7:0]  A,
+    output logic [7:0]  RESULT,
+    output logic        CARRY
+);
+    logic [8:0] temp;
+    always_comb begin
+        if (EN)
+            temp = {1'b0, A} + 1;
+        else
+            temp = 9'b0;
+
+        RESULT = temp[7:0];
+        CARRY  = temp[8];
+    end
+endmodule
+

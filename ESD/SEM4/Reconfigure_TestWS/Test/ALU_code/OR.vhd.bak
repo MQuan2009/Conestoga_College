@@ -1,0 +1,23 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity OR_BLOCK is
+    Port (
+        CLK    : in  STD_LOGIC;
+        EN     : in  STD_LOGIC;
+        A      : in  STD_LOGIC_VECTOR(7 downto 0);
+        B      : in  STD_LOGIC_VECTOR(7 downto 0);
+        RESULT : out STD_LOGIC_VECTOR(7 downto 0)
+    );
+end OR_BLOCK;
+
+architecture Behavioral of OR_BLOCK is
+begin
+    process(A, B, EB)
+    begin
+        if EN = '1' then
+           RESULT <= A or B;
+        end if;
+    end process;
+end Behavioral;
+

@@ -1,0 +1,27 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity SHL is
+    Port (
+        CLK       : in  STD_LOGIC;
+        EN        : in  STD_LOGIC;
+        A         : in  STD_LOGIC_VECTOR(7 downto 0);
+        SEL       : in  STD_LOGIC_VECTOR(2 downto 0);    -- Select register index (3 bits for 8 registers)
+        RESULT    : out STD_LOGIC_VECTOR(7 downto 0);
+        CARRYOUT  : out STD_LOGIC
+    );
+end SHL;
+
+architecture Behavioral of SHL is
+begin
+    process(A, EN, SEL)
+    begin
+        if EN = '1' then
+            CARRYOUT <= A(7);
+            RESULT   <= A(6 downto 0) & '0';
+        end if;
+    end process;
+end Behavioral;
+

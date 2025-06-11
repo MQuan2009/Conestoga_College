@@ -1,0 +1,624 @@
+m255
+K4
+z2
+!s11e MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test
+Eadd
+Z0 w1748450779
+Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 228
+Z4 dD:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code
+Z5 8D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/ADD.vhdl
+Z6 FD:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/ADD.vhdl
+l0
+L5 1
+V5;T8H11j7S4iU@i@nZd2O1
+!s100 z@L<7Ekj[7HRM9SF6OR>h2
+Z7 OV;C;2020.1;71
+32
+Z8 !s110 1749556831
+!i10b 1
+Z9 !s108 1749556831.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/ADD.vhdl|
+Z11 !s107 D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/ADD.vhdl|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Abehavioral
+R1
+R2
+R3
+Z14 DEx4 work 3 add 0 22 5;T8H11j7S4iU@i@nZd2O1
+!i122 228
+l18
+Z15 L17 17
+Vfn:==09B`_zH^mfzBnSEj0
+!s100 `:H@SG_3eKCQ3JWD>ie>K0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eand_block
+Z16 w1748449221
+R2
+R3
+!i122 233
+R4
+Z17 8D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/AND_BLOCK.vhd
+Z18 FD:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/AND_BLOCK.vhd
+l0
+L4 1
+Vg@lIG4D5L9i?[@;2EVgnS3
+!s100 9;[7U930L1A3nNZEGIF8D1
+R7
+32
+Z19 !s110 1749556832
+!i10b 1
+Z20 !s108 1749556832.000000
+Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/AND_BLOCK.vhd|
+Z22 !s107 D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/AND_BLOCK.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+Z23 DEx4 work 9 and_block 0 22 g@lIG4D5L9i?[@;2EVgnS3
+!i122 233
+l15
+Z24 L14 9
+VUD:Egdzb=_DD1W4>NHmE^2
+!s100 jzQ=KcH8kEXmnjHWc5WZ`1
+R7
+32
+R19
+!i10b 1
+R20
+R21
+R22
+!i113 1
+R12
+R13
+Edec
+Z25 w1748969298
+R1
+R2
+R3
+!i122 227
+R4
+Z26 8D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/DEC.vhdl
+Z27 FD:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/DEC.vhdl
+l0
+L5 1
+V>NVN_Uj>Q:0z`;FTFCznk1
+!s100 :coIfSY_dFPzT0B:035QY3
+R7
+32
+R8
+!i10b 1
+R9
+Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/DEC.vhdl|
+Z29 !s107 D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/DEC.vhdl|
+!i113 1
+R12
+R13
+Abehavioral
+R1
+R2
+R3
+Z30 DEx4 work 3 dec 0 22 >NVN_Uj>Q:0z`;FTFCznk1
+!i122 227
+l18
+Z31 L16 18
+VCf9NfB^7fhbhEla28;eIH1
+!s100 zBI:Dmb67lI0jJ>2EcZSS1
+R7
+32
+R8
+!i10b 1
+R9
+R28
+R29
+!i113 1
+R12
+R13
+Einc
+Z32 w1748380491
+R1
+R2
+R3
+!i122 226
+R4
+Z33 8D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/INC.vhdl
+Z34 FD:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/INC.vhdl
+l0
+L5 1
+V:WVazizQF0egC@<SPci1j1
+!s100 ^7NSNCLn^>0d_SCG:>E9N0
+R7
+32
+R8
+!i10b 1
+R9
+Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/INC.vhdl|
+Z36 !s107 D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/INC.vhdl|
+!i113 1
+R12
+R13
+Abehavioral
+R1
+R2
+R3
+Z37 DEx4 work 3 inc 0 22 :WVazizQF0egC@<SPci1j1
+!i122 226
+l18
+R31
+VhN4UL_fSOK4aI5KJzonXz3
+!s100 h1baDejGaTX`4M66z_iRT3
+R7
+32
+R8
+!i10b 1
+R9
+R35
+R36
+!i113 1
+R12
+R13
+Enot_block
+Z38 w1749151013
+R2
+R3
+!i122 236
+R4
+Z39 8D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/NOT_BLOCK.vhd
+Z40 FD:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/NOT_BLOCK.vhd
+l0
+L4 1
+VJRWlo?9PK^jT7>XL6Q6g53
+!s100 IYoDjOVzm[4A3c0VYbE461
+R7
+32
+R19
+!i10b 1
+R20
+Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/NOT_BLOCK.vhd|
+Z42 !s107 D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/NOT_BLOCK.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+Z43 DEx4 work 9 not_block 0 22 JRWlo?9PK^jT7>XL6Q6g53
+!i122 236
+l14
+L13 9
+VUQkFoVOd;@IPEYEM]e:Qc3
+!s100 `nTk:80b9AIiBMgKdGFM60
+R7
+32
+R19
+!i10b 1
+R20
+R41
+R42
+!i113 1
+R12
+R13
+Eor_block
+Z44 w1748969161
+R2
+R3
+!i122 235
+R4
+Z45 8D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/OR_BLOCK.vhd
+Z46 FD:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/OR_BLOCK.vhd
+l0
+L4 1
+VMO49G4J5A0mYC8[AVXO`T2
+!s100 D5N4Ef<hZd44HPohO;_0<2
+R7
+32
+R19
+!i10b 1
+R20
+Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/OR_BLOCK.vhd|
+Z48 !s107 D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/OR_BLOCK.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+Z49 DEx4 work 8 or_block 0 22 MO49G4J5A0mYC8[AVXO`T2
+!i122 235
+l15
+R24
+VeaG8l7L?TR?FCzFPVS2Q51
+!s100 59k=gGJH7M;a`[FmAajDT3
+R7
+32
+R19
+!i10b 1
+R20
+R47
+R48
+!i113 1
+R12
+R13
+Ereg_mux
+Z50 w1748372618
+R1
+R2
+R3
+!i122 230
+R4
+Z51 8D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/MUX.vhdl
+Z52 FD:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/MUX.vhdl
+l0
+L6 1
+VYgLj9Wo>KEgijR]SCzCKn2
+!s100 ?=O4G;e<:B_A495NTRPLS3
+R7
+32
+R19
+!i10b 1
+R20
+Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/MUX.vhdl|
+Z54 !s107 D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/MUX.vhdl|
+!i113 1
+R12
+R13
+Abehavioral
+R1
+R2
+R3
+Z55 DEx4 work 7 reg_mux 0 22 YgLj9Wo>KEgijR]SCzCKn2
+!i122 230
+l19
+L16 15
+VFM3UY6nm;UA?DOz6^1ZHd0
+!s100 5h@nOP7R^G<a?^Wjda0?l0
+R7
+32
+R19
+!i10b 1
+R20
+R53
+R54
+!i113 1
+R12
+R13
+Eshl
+Z56 w1749152436
+Z57 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z58 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+R2
+R3
+!i122 237
+R4
+Z59 8D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/SHL.vhd
+Z60 FD:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/SHL.vhd
+l0
+L6 1
+V@IHbfeZzc6R0CnneFbJBl2
+!s100 Z:6YSJY>DO;CDk8Z2enhd0
+R7
+32
+R19
+!i10b 1
+R20
+Z61 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/SHL.vhd|
+Z62 !s107 D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/SHL.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R57
+R58
+R2
+R3
+Z63 DEx4 work 3 shl 0 22 @IHbfeZzc6R0CnneFbJBl2
+!i122 237
+l18
+Z64 L17 10
+V?:BD;oD[Y4_gRWK]2P^F;3
+!s100 ll_:A;N>PE]Hm]K5`f?OH0
+R7
+32
+R19
+!i10b 1
+R20
+R61
+R62
+!i113 1
+R12
+R13
+Eshr
+Z65 w1749152450
+R57
+R58
+R2
+R3
+!i122 238
+R4
+Z66 8D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/SHR.vhd
+Z67 FD:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/SHR.vhd
+l0
+L6 1
+Vm3`SX`l>2bSZ;D28f_5^00
+!s100 o9<UX6XNWKd7G3?CJ3b_J2
+R7
+32
+R19
+!i10b 1
+R20
+Z68 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/SHR.vhd|
+Z69 !s107 D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/SHR.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R57
+R58
+R2
+R3
+Z70 DEx4 work 3 shr 0 22 m3`SX`l>2bSZ;D28f_5^00
+!i122 238
+l18
+R64
+Z71 VhE?ZZLhY[A`5YcT`JJ^HU1
+Z72 !s100 Hm2nFKQNKeRBR2PHFe9FJ0
+R7
+32
+R19
+!i10b 1
+R20
+R68
+R69
+!i113 1
+R12
+R13
+Esub
+Z73 w1748969023
+R1
+R2
+R3
+!i122 232
+R4
+Z74 8D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/SUB.vhd
+Z75 FD:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/SUB.vhd
+l0
+L5 1
+VWHN[z=bRond8bEzL>T<Al3
+!s100 4XozL@;M:@je3]on6[Oc<1
+R7
+32
+R19
+!i10b 1
+R20
+Z76 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/SUB.vhd|
+Z77 !s107 D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/SUB.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R1
+R2
+R3
+Z78 DEx4 work 3 sub 0 22 WHN[z=bRond8bEzL>T<Al3
+!i122 232
+l18
+R15
+VMg>lRzh5hQLo=ObIXPZZV3
+!s100 GV9VF[N93mSZNQTIRV?F01
+R7
+32
+R19
+!i10b 1
+R20
+R76
+R77
+!i113 1
+R12
+R13
+Etop
+Z79 w1749556697
+R1
+R2
+R3
+!i122 229
+R4
+Z80 8D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/TOP.vhdl
+Z81 FD:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/TOP.vhdl
+l0
+L5 1
+VE_d9;cDBnX:;ijYUjbS5@1
+!s100 z1aj08iV:iME5f0_^_=C>0
+R7
+32
+R19
+!i10b 1
+R20
+Z82 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/TOP.vhdl|
+Z83 !s107 D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/TOP.vhdl|
+!i113 1
+R12
+R13
+Abehavioral
+R70
+R57
+R58
+R63
+R43
+Z84 DEx4 work 9 xor_block 0 22 85]ZGfL4JzXVBnJbY<LUR3
+R49
+R23
+R78
+R14
+R30
+R37
+Z85 DEx4 work 3 tsa 0 22 HHmBdBQAW@S4F?<_INmFk0
+R55
+R1
+R2
+R3
+Z86 DEx4 work 3 top 0 22 E_d9;cDBnX:;ijYUjbS5@1
+!i122 229
+l49
+L24 232
+V7:^fanS;[`igYkM2?LZ[03
+!s100 ;gcU3ZYA4GWBNOK81Xzjn0
+R7
+32
+R19
+!i10b 1
+R20
+R82
+R83
+!i113 1
+R12
+R13
+Etop_tb
+Z87 w1749151990
+R1
+R2
+R3
+!i122 231
+R4
+Z88 8D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/TOP_tb.vhd
+Z89 FD:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/TOP_tb.vhd
+l0
+L5 1
+V_`3oU8h2F_cQgeIMA8>WP2
+!s100 `5XIICcnAG<NSQ4>C33d60
+R7
+32
+R19
+!i10b 1
+R20
+Z90 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/TOP_tb.vhd|
+Z91 !s107 D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/TOP_tb.vhd|
+!i113 1
+R12
+R13
+Asim
+R86
+R1
+R2
+R3
+DEx4 work 6 top_tb 0 22 _`3oU8h2F_cQgeIMA8>WP2
+!i122 231
+l31
+L8 152
+V3JU0oD38ZhgbNee;gaoCI2
+!s100 7W^U4z>1i>_Qj@P5@V<2I1
+R7
+32
+R19
+!i10b 1
+R20
+R90
+R91
+!i113 1
+R12
+R13
+Etsa
+Z92 w1748380576
+R1
+R2
+R3
+!i122 225
+R4
+Z93 8D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/TSA.vhdl
+Z94 FD:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/TSA.vhdl
+l0
+L5 1
+VHHmBdBQAW@S4F?<_INmFk0
+!s100 @UhL9a:JWVHV81RY02XD52
+R7
+32
+R8
+!i10b 1
+R9
+Z95 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/TSA.vhdl|
+Z96 !s107 D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/TSA.vhdl|
+!i113 1
+R12
+R13
+Abehavioral
+R1
+R2
+R3
+R85
+!i122 225
+l15
+L14 10
+VYfAcjT[F<?R>Fh?AECCJl0
+!s100 0ALh0@7EMS7GD[Fi;flEQ3
+R7
+32
+R8
+!i10b 1
+R9
+R95
+R96
+!i113 1
+R12
+R13
+Exor_block
+Z97 w1748449363
+R2
+R3
+!i122 234
+R4
+Z98 8D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/XOR_BLOCK.vhd
+Z99 FD:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/XOR_BLOCK.vhd
+l0
+L4 1
+V85]ZGfL4JzXVBnJbY<LUR3
+!s100 ]]Q3JBF@3zaB5RIN4cdl<2
+R7
+32
+R19
+!i10b 1
+R20
+Z100 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/XOR_BLOCK.vhd|
+Z101 !s107 D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/XOR_BLOCK.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R84
+!i122 234
+l15
+R24
+VVIA6JBJ9;C0i20zVn27gc0
+!s100 zIiD^ZB1OlEQkAfGRh;Qh0
+R7
+32
+R19
+!i10b 1
+R20
+R100
+R101
+!i113 1
+R12
+R13

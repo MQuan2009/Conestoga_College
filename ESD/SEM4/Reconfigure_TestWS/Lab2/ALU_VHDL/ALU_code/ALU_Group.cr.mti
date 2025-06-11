@@ -1,0 +1,117 @@
+D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/TOP_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/TOP_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity TOP_TB
+-- Compiling architecture sim of TOP_TB
+-- Loading entity TOP
+
+} {} {}} D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/XOR_BLOCK.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/XOR_BLOCK.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity XOR_BLOCK
+-- Compiling architecture Behavioral of XOR_BLOCK
+
+} {} {}} D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/TSA.vhdl {1 {vcom -work work -2002 -explicit -stats=none D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/TSA.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity TSA
+-- Compiling architecture Behavioral of TSA
+
+} {} {}} D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/SHR.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/SHR.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity SHR
+-- Compiling architecture Behavioral of SHR
+
+} {} {}} D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/ADD.vhdl {1 {vcom -work work -2002 -explicit -stats=none D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/ADD.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ADD
+-- Compiling architecture Behavioral of ADD
+
+} {} {}} D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/AND_BLOCK.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/AND_BLOCK.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity AND_BLOCK
+-- Compiling architecture Behavioral of AND_BLOCK
+
+} {} {}} D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/MUX.vhdl {1 {vcom -work work -2002 -explicit -stats=none D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/MUX.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity REG_MUX
+-- Compiling architecture Behavioral of REG_MUX
+
+} {} {}} D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/DEC.vhdl {1 {vcom -work work -2002 -explicit -stats=none D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/DEC.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity DEC
+-- Compiling architecture Behavioral of DEC
+
+} {} {}} D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/SUB.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/SUB.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity SUB
+-- Compiling architecture Behavioral of SUB
+
+} {} {}} D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/OR_BLOCK.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/OR_BLOCK.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity OR_BLOCK
+-- Compiling architecture Behavioral of OR_BLOCK
+
+} {} {}} D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/NOT_BLOCK.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/NOT_BLOCK.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity NOT_BLOCK
+-- Compiling architecture Behavioral of NOT_BLOCK
+
+} {} {}} D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/INC.vhdl {1 {vcom -work work -2002 -explicit -stats=none D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/INC.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity INC
+-- Compiling architecture Behavioral of INC
+
+} {} {}} D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/SHL.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Study/Github_ESD/ESD/SEM4/Reconfigure_TestWS/Test/ALU_code/SHL.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity SHL
+-- Compiling architecture Behavioral of SHL
+
+} {} {}}

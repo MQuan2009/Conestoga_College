@@ -1,0 +1,34 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity SUB is
+    Port (
+        CLK      : in  STD_LOGIC;
+        EN       : in  STD_LOGIC;
+        CARRYIN  : in  STD_LOGIC;
+        A        : in  STD_LOGIC_VECTOR(7 downto 0);
+        B        : in  STD_LOGIC_VECTOR(7 downto 0);
+        RESULT   : out STD_LOGIC_VECTOR(7 downto 0);
+        BORROW   : out STD_LOGIC
+    );
+end SUB;
+
+architecture Behavioral of SUB is
+begin
+    process(A, B, CARRYIN, EN)
+        variable temp  : STD_LOGIC_VECTOR(8 downto 0);
+    begin
+        if EN = '1' then
+            if CARRYIN = '1' then
+                temp := std_logic_vector(resize(signed(A), 9) - resize(signed(B), 9) - 1);
+            else
+                temp := std_logic_vector(resize(signed(A), 9) - resize(signed(B), 9));
+            end if;
+	    -- Store incremented value and carry in selected register
+            RESULT <= temp(7 downto 0);
+            BORROW <= temp(8);
+        end if;
+    end process;
+end Behavioral;
+

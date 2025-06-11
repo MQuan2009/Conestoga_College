@@ -1,0 +1,34 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity TSA is
+    Port (
+        CLK    : in  STD_LOGIC;
+        EN     : in  STD_LOGIC;
+        ASEL   : in  STD_LOGIC_VECTOR(2 downto 0);     -- select 0 = DATA_IN, 1?7 = reg 1?7
+        DATA   : in  STD_LOGIC_VECTOR(7 downto 0);     -- external input
+        REGS   : in  STD_LOGIC_VECTOR(63 downto 0);    -- flattened register file
+        OUTPUT : out STD_LOGIC_VECTOR(7 downto 0)
+    );
+end TSA;
+
+architecture Behavioral of TSA is
+    signal selected : STD_LOGIC_VECTOR(7 downto 0);
+begin
+    -- multiplexer: if ASEL = "000" take DATA, else slice the right 8-bit reg
+    selected <= DATA 
+                when ASEL = "000" else
+                  REGS( to_integer(unsigned(ASEL))*8 + 7 downto
+                        to_integer(unsigned(ASEL))*8 );
+
+    process(EN, ASEL, DATA, REGS)
+    begin
+        if rising_edge(CLK) then
+            if EN = '1' then
+                OUTPUT <= selected;
+            end if;
+        end if;
+    end process;
+end Behavioral;
+
