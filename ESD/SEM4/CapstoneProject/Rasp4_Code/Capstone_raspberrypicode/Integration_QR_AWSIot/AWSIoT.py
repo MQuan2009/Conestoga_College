@@ -34,8 +34,7 @@ def publish_to_aws(qr_data):
 
     # Publish
     message = {
-        "qr_data": qr_data,
-        "timestamp": time.strftime("%Y-%m-%d %H:%M:%S")
+        "message": qr_data,
     }
     payload = json.dumps(message, indent=2)
 
